@@ -1,0 +1,172 @@
+/* ========================================
+   KASSY BAKES — About Page Styles
+   ======================================== */
+
+/* ── Page Hero ── */
+.page-hero {
+  padding: 5rem 2rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero {
+  background: linear-gradient(160deg, var(--cream) 0%, var(--beige) 100%);
+}
+
+.page-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  animation: fadeUp 0.7s ease both;
+}
+
+.page-hero-inner .section-title { margin-bottom: 1rem; }
+.page-hero-inner .section-subtitle { margin: 1rem auto 0; }
+
+.about-hero-art {
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.85;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  animation: fadeIn 1s 0.3s ease both;
+  box-shadow: var(--shadow-lg);
+}
+.about-hero-art svg { width: 100%; display: block; }
+
+/* ── Story Section ── */
+.story-section { background: var(--white-warm); }
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.story-text p {
+  color: var(--brown-warm);
+  line-height: 1.9;
+  margin-bottom: 1.1rem;
+}
+
+.story-img-wrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+.story-img-wrap svg { width: 100%; display: block; }
+
+/* ── Philosophy ── */
+.philosophy-section { background: var(--cream); }
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.philosophy-card {
+  background: var(--white-warm);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+.philosophy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.phil-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.philosophy-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--brown-deep);
+  margin-bottom: 0.75rem;
+}
+
+.philosophy-card p {
+  font-size: 0.9rem;
+  color: var(--brown-warm);
+  line-height: 1.75;
+}
+
+/* ── Values Banner ── */
+.values-banner {
+  background: var(--brown-warm);
+  padding: 3rem 2rem;
+}
+
+.values-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.value-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.value-number {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1;
+}
+
+.value-label {
+  font-family: var(--font-hand);
+  font-size: 1rem;
+  color: var(--beige);
+}
+
+.value-divider {
+  color: var(--gold);
+  opacity: 0.35;
+  font-size: 1.3rem;
+}
+
+/* ── CTA ── */
+.about-cta-section { background: var(--beige); text-align: center; }
+.about-cta-inner .section-title { margin-bottom: 0.5rem; }
+
+.about-cta-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .philosophy-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .story-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .philosophy-grid { grid-template-columns: 1fr 1fr; }
+  .values-inner { gap: 2rem; }
+  .value-divider { display: none; }
+}
+
+@media (max-width: 480px) {
+  .philosophy-grid { grid-template-columns: 1fr; }
+}

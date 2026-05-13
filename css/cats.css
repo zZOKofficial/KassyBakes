@@ -1,0 +1,267 @@
+/* ========================================
+   KASSY BAKES — Cats Page Styles
+   ======================================== */
+
+.cats-page-hero {
+  background: linear-gradient(160deg, var(--beige) 0%, var(--cream) 100%);
+}
+
+/* ── Cat Profile ── */
+.cat-profile { overflow: visible; }
+
+.rico-section { background: var(--cream-light); }
+.sam-section  { background: var(--brown-deep); }
+.sam-section .section-title { color: var(--cream); }
+.sam-section .paw-divider { color: var(--gold); }
+.sam-section p { color: var(--beige-mid); }
+
+.cat-profile-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.sam-profile-inner { /* text left, art right */ }
+
+/* ── Cat Full Art ── */
+.cat-full-art { position: relative; }
+
+.cat-art-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+.cat-art-card svg { width: 100%; display: block; }
+
+.sam-card { box-shadow: 0 24px 80px rgba(0,0,0,0.5); }
+
+.cat-personality-badge {
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  font-family: var(--font-hand);
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rico-badge {
+  background: var(--gold);
+  color: var(--brown-deep);
+}
+
+.sam-badge {
+  background: var(--brown-deep);
+  color: var(--gold-light);
+  border: 1.5px solid var(--gold);
+}
+
+/* ── Cat Name Block ── */
+.cat-name-block {
+  margin-bottom: 0.75rem;
+}
+
+.cat-big-name {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 700;
+  color: var(--brown-deep);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.sam-name { color: var(--gold-light); }
+
+.cat-title-tag {
+  display: inline-block;
+  font-family: var(--font-hand);
+  font-size: 0.95rem;
+  color: var(--caramel);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.sam-section .cat-title-tag { color: var(--gold); }
+
+.cat-profile-text p {
+  color: var(--brown-warm);
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+
+/* ── Cat Stats ── */
+.cat-stats {
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1.5rem;
+}
+
+.cat-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.cat-stat-label {
+  font-family: var(--font-hand);
+  font-size: 0.78rem;
+  color: var(--caramel-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.sam-section .cat-stat-label { color: var(--gold); opacity: 0.7; }
+
+.cat-stat-value {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--brown-dark);
+  font-weight: 500;
+}
+.sam-section .cat-stat-value { color: var(--beige); }
+
+/* ── Flavor Tags ── */
+.cat-flavors {
+  margin: 1.5rem 0;
+}
+
+.cat-flavors h3 {
+  font-family: var(--font-hand);
+  font-size: 1rem;
+  color: var(--brown-mid);
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.sam-section .cat-flavors h3 { color: var(--gold-light); }
+
+.flavor-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.flavor-tag {
+  display: inline-block;
+  font-family: var(--font-hand);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+}
+
+/* ── Cat Quote ── */
+.cat-quote {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--caramel);
+  background: rgba(160, 98, 42, 0.07);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.sam-quote {
+  border-left-color: var(--gold);
+  background: rgba(212, 168, 67, 0.08);
+}
+
+.cat-quote blockquote {
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--brown-warm);
+  line-height: 1.75;
+  margin-bottom: 0.5rem;
+}
+.sam-quote blockquote { color: var(--beige-mid); }
+
+.cat-quote cite {
+  font-family: var(--font-hand);
+  font-size: 0.85rem;
+  color: var(--caramel);
+  font-style: normal;
+}
+.sam-quote cite { color: var(--gold); }
+
+/* ── Divider ── */
+.cat-section-divider {
+  text-align: center;
+  padding: 2rem;
+  background: var(--beige);
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.8rem;
+  opacity: 0.5;
+}
+
+/* ── Together Section ── */
+.together-section { background: var(--beige); }
+
+.together-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.together-card {
+  background: var(--white-warm);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.4rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+.together-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.together-icon {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.together-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--brown-deep);
+  margin-bottom: 0.6rem;
+}
+
+.together-card p {
+  font-size: 0.9rem;
+  color: var(--brown-warm);
+  line-height: 1.7;
+}
+
+/* ── Cats CTA ── */
+.cats-cta-section { background: var(--cream); text-align: center; }
+.cats-cta-inner .section-title { margin-bottom: 0.5rem; }
+.cats-cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .together-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .cat-profile-inner,
+  .sam-profile-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .sam-profile-inner .cat-full-art { order: -1; }
+  .cat-stats { grid-template-columns: 1fr; }
+  .cat-big-name { font-size: 3.5rem; }
+  .cat-personality-badge { bottom: -0.5rem; font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+  .together-grid { grid-template-columns: 1fr; }
+}
