@@ -1,0 +1,27 @@
+{
+  "name": "kassybakes",
+  "version": "1.0.0",
+  "description": "Kassy Bakes - A cozy handmade, cat-themed boutique bakery",
+  "main": "index.html",
+  "scripts": {
+    "build": "esbuild js/speed-insights.js --bundle --format=iife --outfile=js/speed-insights.bundle.js --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zZOKofficial/KassyBakes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zZOKofficial/KassyBakes/issues"
+  },
+  "homepage": "https://github.com/zZOKofficial/KassyBakes#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}
