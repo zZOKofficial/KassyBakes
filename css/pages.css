@@ -51,7 +51,7 @@
 .hero-orbs i:nth-child(2) { width: 320px; height: 320px; background: radial-gradient(circle, color-mix(in srgb,var(--c-gold) 45%,transparent), transparent 70%); bottom: -90px; left: -80px; opacity: 0.3; }
 .hero-orbs i:nth-child(3) { width: 180px; height: 180px; background: radial-gradient(circle, color-mix(in srgb,var(--c-cherry) 30%,transparent), transparent 70%); top: 30%; left: 12%; opacity: 0.18; }
 
-.hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; width: 100%; position: relative; z-index: 2; }
+.hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; position: relative; z-index: 2; }
 .hero-eyebrow { animation: riseIn 0.7s var(--ease-out) both; }
 .hero h1 { font-size: var(--t-3xl); margin: 0.7rem 0 1.1rem; animation: riseIn 0.8s 0.05s var(--ease-out) both; }
 .hero .lede { animation: riseIn 0.8s 0.15s var(--ease-out) both; }
@@ -183,6 +183,16 @@
 .cat-hero.flip .cat-portrait { order: 2; }
 .cat-portrait { border-radius: var(--r-md); overflow: hidden; }
 .cat-portrait svg { width: 100%; display: block; }
+
+/* Sam is a solid-black cat: pure black in day theme, but on dark night-theme
+   surfaces the silhouette needs a crisp cream rim to read. Day theme = no rim. */
+[data-theme="night"] .sam-rim { filter: drop-shadow(0 0 1.5px #F7EFDD) drop-shadow(0 0 1.4px #F7EFDD); }
+/* Always-on rim for Sam on permanently-dark surfaces (e.g. the footer band). */
+.sam-rim-on { filter: drop-shadow(0 0 1.5px #F7EFDD) drop-shadow(0 0 1.4px #F7EFDD); }
+
+/* Sam scene illustrations (mail, checklist, gift box, heart-paws) */
+.sam-scene { display: block; margin-inline: auto; line-height: 0; }
+.sam-scene svg { display: block; width: 100%; height: auto; }
 .cat-name { font-family: var(--f-display); font-weight: 700; font-size: var(--t-xl); color: var(--ink); line-height: 1; }
 .cat-title { font-family: var(--f-hand); font-size: 1.4rem; color: var(--brand); margin-bottom: 0.8rem; }
 .cat-bio { color: var(--ink-soft); line-height: 1.8; margin-bottom: 1rem; }

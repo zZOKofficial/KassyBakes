@@ -10,17 +10,19 @@
   /* Cat-face logo mark (kept — bespoke, dependency-free, on-brand) */
   const LOGO = `
     <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+      <path d="M7 13 Q5 1 15 9 Z" fill="var(--c-walnut)"/>
+      <path d="M33 13 Q35 1 25 9 Z" fill="var(--c-walnut)"/>
+      <path d="M10 11 Q8.5 4 14.5 9 Z" fill="var(--c-honey)"/>
+      <path d="M30 11 Q31.5 4 25.5 9 Z" fill="var(--c-honey)"/>
       <circle cx="20" cy="21" r="13.5" fill="var(--c-walnut)"/>
-      <polygon points="8,12 4,3 14,10" fill="var(--c-walnut)"/>
-      <polygon points="32,12 36,3 26,10" fill="var(--c-walnut)"/>
-      <polygon points="9,11 6,6 14,10" fill="var(--c-honey)"/>
-      <polygon points="31,11 34,6 26,10" fill="var(--c-honey)"/>
-      <circle cx="15" cy="20" r="2.4" fill="var(--c-cream)"/>
-      <circle cx="25" cy="20" r="2.4" fill="var(--c-cream)"/>
-      <circle cx="15.4" cy="20.4" r="1.2" fill="var(--c-cocoa)"/>
-      <circle cx="25.4" cy="20.4" r="1.2" fill="var(--c-cocoa)"/>
-      <ellipse cx="20" cy="24.4" rx="1.5" ry="1" fill="var(--c-honey)"/>
-      <path d="M17.6 26 Q20 27.8 22.4 26" stroke="var(--c-walnut)" stroke-width="1" fill="none" stroke-linecap="round"/>
+      <circle cx="15" cy="20.5" r="2.9" fill="var(--c-cream)"/>
+      <circle cx="25" cy="20.5" r="2.9" fill="var(--c-cream)"/>
+      <circle cx="15.3" cy="20.8" r="1.5" fill="var(--c-cocoa)"/>
+      <circle cx="25.3" cy="20.8" r="1.5" fill="var(--c-cocoa)"/>
+      <circle cx="14.2" cy="19.7" r="0.7" fill="#fff" opacity="0.9"/>
+      <circle cx="24.2" cy="19.7" r="0.7" fill="#fff" opacity="0.9"/>
+      <path d="M18.6 24 Q20 23.2 21.4 24 Q20 25.4 18.6 24 Z" fill="var(--c-honey)"/>
+      <path d="M20 25.2 Q20 26.4 18.7 26.6 M20 25.2 Q20 26.4 21.3 26.6" stroke="var(--c-walnut)" stroke-width="0.9" fill="none" stroke-linecap="round"/>
       <line x1="6" y1="23" x2="14.5" y2="24" stroke="var(--c-cream)" stroke-width="0.9" opacity="0.7"/>
       <line x1="6" y1="25.5" x2="14.5" y2="25.5" stroke="var(--c-cream)" stroke-width="0.9" opacity="0.7"/>
       <line x1="34" y1="23" x2="25.5" y2="24" stroke="var(--c-cream)" stroke-width="0.9" opacity="0.7"/>
@@ -84,6 +86,16 @@
             <div class="display">Kassy Bakes</div>
             <p>Handmade desserts with a little cat chaos. Baked fresh to order, supervised by Rico &amp; Sam.</p>
             ${social()}
+            <div class="sam-scene sam-rim-on" style="max-width:150px;margin:1.6rem 0 0" aria-hidden="true">
+              <svg viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 150 C 40 110 70 96 96 100 L96 140 C 70 150 48 156 30 150 Z" fill="#1A0E08"/>
+                <path d="M190 150 C 180 110 150 96 124 100 L124 140 C 150 150 172 156 190 150 Z" fill="#1A0E08"/>
+                <circle cx="110" cy="92" r="52" fill="none" stroke="#F7EFDD" stroke-width="6"/>
+                <circle cx="110" cy="92" r="44" fill="#1A0E08"/>
+                <path d="M158 86 Q176 88 176 100 Q176 112 160 110" fill="none" stroke="#F7EFDD" stroke-width="6"/>
+                <path d="M110 110 C 96 98 92 86 100 80 C 106 76 110 82 110 86 C 110 82 114 76 120 80 C 128 86 124 98 110 110 Z" fill="none" stroke="#F7EFDD" stroke-width="3.4" stroke-linejoin="round"/>
+              </svg>
+            </div>
           </div>
           <div class="footer-col">
             <h4>Explore</h4>
