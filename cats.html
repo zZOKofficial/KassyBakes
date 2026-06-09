@@ -1,382 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="day">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Meet Rico and Sam — the official Kassy Bakes supervisors, chaos agents, and surprisingly effective quality inspectors."/>
+  <meta name="description" content="Meet Rico & Sam — the two cats who run Kassy Bakes. The warm chaotic taste-tester and the elegant midnight supervisor. The real owners of this bakery."/>
+  <meta name="theme-color" content="#FAF4E8"/>
   <title>The Cats — Kassy Bakes</title>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/cats.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="css/core.css"/>
+  <link rel="stylesheet" href="css/pages.css"/>
+  <script>(function(){try{var t=localStorage.getItem('kb-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'night':'day');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
-<body class="page-enter">
-
+<body>
+  <a href="#main" class="sr-only">Skip to content</a>
   <div id="nav-root"></div>
 
-  <main class="page-pad">
-
-    <!-- ── Page Hero ── -->
-    <section class="page-hero cats-page-hero texture-bg" aria-label="Meet the cats">
-      <div class="page-hero-inner">
-        <span class="section-label">Chaos Department</span>
-        <h1 class="section-title">Meet the <em>Real Owners</em></h1>
-        <div class="paw-divider">🐾 · · · 🐾</div>
-        <p class="section-subtitle">
-          They didn't ask to be mascots. They just showed up, demanded snacks,
-          and somehow became the heart of everything Kassy Bakes is about.
-        </p>
+  <main id="main" class="page">
+    <header class="phead">
+      <div class="wrap-narrow">
+        <span class="eyebrow">The chaos department</span>
+        <h1 class="display">The real <em>owners</em></h1>
+        <div class="paws center"></div>
+        <p class="lede">They didn’t apply for the job. They didn’t interview. They just sat on the cake boxes until everyone accepted the truth — Rico and Sam run this place.</p>
       </div>
-    </section>
+    </header>
 
-    <!-- ══════════════════════════════════
-         RICO — Full Profile
-    ══════════════════════════════════ -->
-    <section class="section cat-profile rico-section" aria-label="Rico's profile" id="rico">
-      <div class="section-inner cat-profile-inner">
+    <section class="section">
+      <div class="wrap">
 
-        <div class="cat-full-art rico-art reveal" aria-hidden="true">
-          <div class="cat-art-card">
-            <svg viewBox="0 0 360 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- background warmth -->
-              <rect width="360" height="420" rx="28" fill="#F5ECD7"/>
-              <ellipse cx="180" cy="380" rx="160" ry="60" fill="#EDD9B4" opacity="0.8"/>
-              <!-- body -->
-              <ellipse cx="180" cy="310" rx="90" ry="100" fill="#A0622A"/>
-              <ellipse cx="180" cy="296" rx="80" ry="88" fill="#C8844A"/>
-              <!-- tail -->
-              <path d="M260 340 Q320 310 325 265 Q330 220 300 210" stroke="#A0622A" stroke-width="22" fill="none" stroke-linecap="round"/>
-              <path d="M260 340 Q320 310 325 265 Q330 220 300 210" stroke="#C8844A" stroke-width="16" fill="none" stroke-linecap="round"/>
-              <!-- mane chest -->
-              <ellipse cx="180" cy="240" rx="92" ry="45" fill="#A0622A"/>
-              <ellipse cx="180" cy="238" rx="86" ry="40" fill="#C4732A" opacity="0.75"/>
-              <!-- stripes on body -->
-              <path d="M135 270 Q155 256 175 270" stroke="#7B4A22" stroke-width="2.5" fill="none" opacity="0.45"/>
-              <path d="M148 292 Q170 278 192 292" stroke="#7B4A22" stroke-width="2.5" fill="none" opacity="0.45"/>
-              <path d="M132 314 Q158 298 184 314" stroke="#7B4A22" stroke-width="2.5" fill="none" opacity="0.45"/>
-              <!-- head -->
-              <circle cx="180" cy="170" r="100" fill="#A0622A"/>
-              <circle cx="180" cy="162" r="92" fill="#C8844A"/>
-              <!-- mane ring -->
-              <circle cx="180" cy="170" r="108" fill="none" stroke="#C4732A" stroke-width="18" opacity="0.4"/>
-              <!-- ears -->
-              <polygon points="108,128 90,88 136,112" fill="#A0622A"/>
-              <polygon points="252,128 270,88 224,112" fill="#A0622A"/>
-              <polygon points="110,126 95,92 134,112" fill="#D4A843" opacity="0.62"/>
-              <polygon points="250,126 265,92 226,112" fill="#D4A843" opacity="0.62"/>
-              <!-- forehead stripes -->
-              <path d="M164,132 Q180,122 196,132" stroke="#7B4A22" stroke-width="2.5" fill="none" opacity="0.52"/>
-              <path d="M158,146 Q180,135 202,146" stroke="#7B4A22" stroke-width="2.5" fill="none" opacity="0.52"/>
-              <path d="M155,160 Q180,149 205,160" stroke="#7B4A22" stroke-width="2.2" fill="none" opacity="0.42"/>
-              <!-- eyes -->
-              <circle cx="155" cy="162" r="22" fill="#F5ECD7"/>
-              <circle cx="205" cy="162" r="22" fill="#F5ECD7"/>
-              <circle cx="155" cy="163" r="15" fill="#5A6B3A"/>
-              <circle cx="205" cy="163" r="15" fill="#5A6B3A"/>
-              <ellipse cx="155" cy="165" rx="10" ry="14" fill="#2C1A0E"/>
-              <ellipse cx="205" cy="165" rx="10" ry="14" fill="#2C1A0E"/>
-              <circle cx="150" cy="159" r="3.5" fill="white" opacity="0.9"/>
-              <circle cx="200" cy="159" r="3.5" fill="white" opacity="0.9"/>
-              <!-- nose -->
-              <ellipse cx="180" cy="182" rx="8" ry="6" fill="#C4732A"/>
-              <!-- mouth happy -->
-              <path d="M168 192 Q180 202 192 192" stroke="#7B4A22" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-              <!-- tongue -->
-              <ellipse cx="180" cy="200" rx="7" ry="5" fill="#D4A843" opacity="0.6"/>
-              <!-- whiskers -->
-              <line x1="85" y1="176" x2="160" y2="182" stroke="#D9C49A" stroke-width="1.8" opacity="0.6"/>
-              <line x1="85" y1="188" x2="160" y2="186" stroke="#D9C49A" stroke-width="1.8" opacity="0.6"/>
-              <line x1="85" y1="200" x2="160" y2="192" stroke="#D9C49A" stroke-width="1.5" opacity="0.5"/>
-              <line x1="275" y1="176" x2="200" y2="182" stroke="#D9C49A" stroke-width="1.8" opacity="0.6"/>
-              <line x1="275" y1="188" x2="200" y2="186" stroke="#D9C49A" stroke-width="1.8" opacity="0.6"/>
-              <line x1="275" y1="200" x2="200" y2="192" stroke="#D9C49A" stroke-width="1.5" opacity="0.5"/>
-              <!-- paws with caramel cake slice -->
-              <ellipse cx="130" cy="370" rx="32" ry="20" fill="#A0622A"/>
-              <ellipse cx="130" cy="367" rx="28" ry="17" fill="#C8844A"/>
-              <ellipse cx="230" cy="370" rx="32" ry="20" fill="#A0622A"/>
-              <ellipse cx="230" cy="367" rx="28" ry="17" fill="#C8844A"/>
-              <!-- toe beans -->
-              <circle cx="122" cy="362" r="5" fill="#A0622A"/>
-              <circle cx="131" cy="359" r="5" fill="#A0622A"/>
-              <circle cx="140" cy="362" r="5" fill="#A0622A"/>
-              <circle cx="222" cy="362" r="5" fill="#A0622A"/>
-              <circle cx="231" cy="359" r="5" fill="#A0622A"/>
-              <circle cx="240" cy="362" r="5" fill="#A0622A"/>
-              <!-- cake slice in left paw -->
-              <polygon points="108,352 128,335 148,352" fill="#C8844A"/>
-              <polygon points="110,352 128,338 146,352" fill="#A0622A"/>
-              <line x1="108" y1="352" x2="148" y2="352" stroke="#EDD9B4" stroke-width="3" stroke-linecap="round"/>
-              <path d="M112 348 Q128 340 144 348" stroke="#D4A843" stroke-width="1.5" fill="none" opacity="0.6"/>
-              <!-- sparkles -->
-              <text x="40" y="90" font-size="22" opacity="0.35">✦</text>
-              <text x="298" y="95" font-size="18" opacity="0.3">✦</text>
-              <text x="170" y="50" font-size="14" opacity="0.25">✦</text>
+        <!-- RICO -->
+        <article class="cat-hero rico reveal">
+          <div class="cat-portrait" aria-hidden="true">
+            <svg viewBox="0 0 220 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="110" cy="210" r="76" fill="#C8844A" opacity="0.14"/>
+              <ellipse cx="110" cy="172" rx="54" ry="60" fill="#A0622A"/><ellipse cx="110" cy="165" rx="47" ry="52" fill="#C8844A"/>
+              <path d="M78 152 Q92 142 105 152" stroke="#7B4A22" stroke-width="2" fill="none" opacity="0.4"/>
+              <path d="M86 168 Q102 158 118 168" stroke="#7B4A22" stroke-width="2" fill="none" opacity="0.4"/>
+              <ellipse cx="110" cy="120" rx="60" ry="28" fill="#C4732A"/>
+              <circle cx="110" cy="92" r="56" fill="#A0622A"/><circle cx="110" cy="87" r="50" fill="#C8844A"/>
+              <circle cx="110" cy="92" r="60" fill="none" stroke="#C4732A" stroke-width="11" opacity="0.45"/>
+              <polygon points="72,66 60,38 88,60" fill="#A0622A"/><polygon points="148,66 160,38 132,60" fill="#A0622A"/>
+              <polygon points="73,65 62,42 87,60" fill="#D4A843" opacity="0.65"/><polygon points="147,65 158,42 133,60" fill="#D4A843" opacity="0.65"/>
+              <path d="M96 60 Q110 53 124 60" stroke="#7B4A22" stroke-width="2" fill="none" opacity="0.55"/>
+              <path d="M92 70 Q110 62 128 70" stroke="#7B4A22" stroke-width="2" fill="none" opacity="0.55"/>
+              <circle cx="92" cy="88" r="14" fill="#F5ECD7"/><circle cx="128" cy="88" r="14" fill="#F5ECD7"/>
+              <circle cx="92" cy="89" r="9.5" fill="#5A6B3A"/><circle cx="128" cy="89" r="9.5" fill="#5A6B3A"/>
+              <ellipse cx="92" cy="90" rx="6" ry="8" fill="#2C1A0E"/><ellipse cx="128" cy="90" rx="6" ry="8" fill="#2C1A0E"/>
+              <circle cx="89" cy="86" r="2.2" fill="#fff" opacity="0.9"/><circle cx="125" cy="86" r="2.2" fill="#fff" opacity="0.9"/>
+              <ellipse cx="110" cy="100" rx="5.5" ry="3.5" fill="#C4732A"/>
+              <path d="M102 107 Q110 114 118 107" stroke="#7B4A22" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+              <line x1="56" y1="94" x2="98" y2="99" stroke="#D9C49A" stroke-width="1.4" opacity="0.7"/>
+              <line x1="56" y1="103" x2="98" y2="102" stroke="#D9C49A" stroke-width="1.4" opacity="0.7"/>
+              <line x1="164" y1="94" x2="122" y2="99" stroke="#D9C49A" stroke-width="1.4" opacity="0.7"/>
+              <line x1="164" y1="103" x2="122" y2="102" stroke="#D9C49A" stroke-width="1.4" opacity="0.7"/>
+              <ellipse cx="80" cy="198" rx="20" ry="13" fill="#A0622A"/><ellipse cx="140" cy="198" rx="20" ry="13" fill="#A0622A"/>
+              <rect x="128" y="176" width="22" height="20" rx="4" fill="#5C3317"/><ellipse cx="139" cy="176" rx="13" ry="7" fill="#F5ECD7"/><circle cx="139" cy="168" r="3.5" fill="#D4A843"/>
             </svg>
           </div>
-          <div class="cat-personality-badge rico-badge">
-            <span>🍮</span> Caramel Obsessed
+          <div>
+            <p class="eyebrow">Cat 01</p>
+            <h2 class="cat-name">Rico</h2>
+            <p class="cat-title">The warm, playful one 🦁</p>
+            <p class="cat-bio">Lion-maned and caramel-obsessed, Rico is pure warm chaos. He’s the first to investigate any new smell from the oven, the loudest advocate for “just one more taste test,” and the reason the butterscotch sauce lives on a high shelf. If your cake feels like a hug, that’s Rico’s influence.</p>
+            <div class="cat-facts">
+              <div class="cat-fact"><b>Vibe</b><span>Energetic, affectionate, food-motivated, gloriously chaotic</span></div>
+              <div class="cat-fact"><b>Represents</b><span>Caramel, coffee, butterscotch, warm seasonal treats</span></div>
+              <div class="cat-fact"><b>Known for</b><span>Stealing the caramel jar. Three times. This week.</span></div>
+            </div>
+            <div class="cluster" style="margin-top:1.2rem"><span class="chip">🍮 Caramel</span><span class="chip">☕ Coffee</span><span class="chip">🎃 Butterscotch</span></div>
           </div>
-        </div>
+        </article>
 
-        <div class="cat-profile-text reveal" style="transition-delay:.15s">
-          <div class="cat-name-block">
-            <h2 class="cat-big-name">Rico</h2>
-            <span class="cat-title-tag">Chief Taste Tester &amp; Chaos Agent</span>
-          </div>
-          <div class="paw-divider" style="text-align:left">🐾 · · ·</div>
-
-          <p>
-            Rico arrived in the kitchen during a caramel sauce experiment and has never
-            really left. He has a particular talent for appearing exactly when something
-            smells good — and disappearing the moment there's work to do.
-          </p>
-          <p>
-            He is affectionate, loud, and will headbutt you until you share your butterscotch cake.
-            Multiple attempts have been made to ban him from the kitchen counter.
-            All have failed.
-          </p>
-
-          <div class="cat-stats">
-            <div class="cat-stat">
-              <span class="cat-stat-label">Fur Color</span>
-              <span class="cat-stat-value">Brown / Orange with black stripes</span>
-            </div>
-            <div class="cat-stat">
-              <span class="cat-stat-label">Eye Color</span>
-              <span class="cat-stat-value" style="color:var(--green-muted)">Forest Green</span>
-            </div>
-            <div class="cat-stat">
-              <span class="cat-stat-label">Signature Move</span>
-              <span class="cat-stat-value">Batting ingredients off the counter</span>
-            </div>
-            <div class="cat-stat">
-              <span class="cat-stat-label">Weakness</span>
-              <span class="cat-stat-value">Caramel. Always caramel.</span>
-            </div>
-          </div>
-
-          <div class="cat-flavors">
-            <h3>Rico's Flavor World</h3>
-            <div class="flavor-tags">
-              <span class="flavor-tag" style="background:#A0622A;color:#F5ECD7">🍮 Caramel</span>
-              <span class="flavor-tag" style="background:#7B4A22;color:#F5ECD7">☕ Coffee</span>
-              <span class="flavor-tag" style="background:#C4732A;color:#F5ECD7">🧈 Butterscotch</span>
-              <span class="flavor-tag" style="background:#D4A843;color:#2C1A0E">🍊 Warm Spices</span>
-              <span class="flavor-tag" style="background:#5C3317;color:#F5ECD7">🌰 Cinnamon</span>
-            </div>
-          </div>
-
-          <div class="cat-quote">
-            <blockquote>
-              "Rico once knocked an entire caramel cake off the counter, caught a piece mid-air,
-              and looked us dead in the eyes while eating it. We couldn't even be mad."
-            </blockquote>
-            <cite>— Kassy, Founder</cite>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════
-         DIVIDER
-    ══════════════════════════════════ -->
-    <div class="cat-section-divider" aria-hidden="true">
-      <span>🐾</span><span>🐾</span><span>🐾</span>
-    </div>
-
-    <!-- ══════════════════════════════════
-         SAM — Full Profile
-    ══════════════════════════════════ -->
-    <section class="section cat-profile sam-section" aria-label="Sam's profile" id="sam">
-      <div class="section-inner cat-profile-inner sam-profile-inner">
-
-        <div class="cat-profile-text reveal">
-          <div class="cat-name-block">
-            <h2 class="cat-big-name sam-name">Sam</h2>
-            <span class="cat-title-tag">Chief Inspector &amp; Midnight Chocolate Critic</span>
-          </div>
-          <div class="paw-divider" style="text-align:left">🐾 · · ·</div>
-
-          <p>
-            Sam is harder to read. He appears silently, sits somewhere high up, and watches
-            every step of the baking process with an expression that could mean approval
-            or total contempt. Nobody is ever really sure.
-          </p>
-          <p>
-            He is drawn exclusively to dark chocolate and midnight hours.
-            He has been caught, on more than one occasion, sitting next to a brownie tray
-            at 2am with absolutely no remorse.
-          </p>
-
-          <div class="cat-stats">
-            <div class="cat-stat">
-              <span class="cat-stat-label">Fur Color</span>
-              <span class="cat-stat-value">Pure Black — sleek and velvety</span>
-            </div>
-            <div class="cat-stat">
-              <span class="cat-stat-label">Eye Color</span>
-              <span class="cat-stat-value" style="color:var(--gold)">Gleaming Yellow</span>
-            </div>
-            <div class="cat-stat">
-              <span class="cat-stat-label">Signature Move</span>
-              <span class="cat-stat-value">Silent stare of judgment</span>
-            </div>
-            <div class="cat-stat">
-              <span class="cat-stat-label">Weakness</span>
-              <span class="cat-stat-value">Dark chocolate. Won't admit it.</span>
-            </div>
-          </div>
-
-          <div class="cat-flavors">
-            <h3>Sam's Flavor World</h3>
-            <div class="flavor-tags">
-              <span class="flavor-tag" style="background:#2C1A0E;color:#F5ECD7">🍫 Dark Chocolate</span>
-              <span class="flavor-tag" style="background:#3D2208;color:#F5ECD7">🍪 Brownies</span>
-              <span class="flavor-tag" style="background:#1A0E08;color:#D4A843">🌙 Midnight Vibes</span>
-              <span class="flavor-tag" style="background:#5C3317;color:#F5ECD7">✨ Premium Ganache</span>
-              <span class="flavor-tag" style="background:#8B2635;color:#F5ECD7">🍒 Bittersweet</span>
-            </div>
-          </div>
-
-          <div class="cat-quote sam-quote">
-            <blockquote>
-              "Sam once sat on the brownie box for 40 minutes. We don't know if he was guarding
-              it or just warming it up. We called it quality control and moved on."
-            </blockquote>
-            <cite>— Kassy, Founder</cite>
-          </div>
-        </div>
-
-        <div class="cat-full-art sam-art reveal" style="transition-delay:.15s" aria-hidden="true">
-          <div class="cat-art-card sam-card">
-            <svg viewBox="0 0 360 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="360" height="420" rx="28" fill="#1A0E08"/>
-              <ellipse cx="180" cy="390" rx="155" ry="55" fill="#2C1A0E" opacity="0.9"/>
-              <!-- stars / sparkles on background -->
-              <circle cx="50" cy="50" r="2" fill="#D4A843" opacity="0.5"/>
-              <circle cx="310" cy="70" r="1.5" fill="#D4A843" opacity="0.4"/>
-              <circle cx="80" cy="120" r="1.5" fill="#D4A843" opacity="0.35"/>
-              <circle cx="280" cy="40" r="2.5" fill="#D4A843" opacity="0.45"/>
-              <circle cx="330" cy="140" r="1.5" fill="#D4A843" opacity="0.3"/>
-              <text x="30" y="80" font-size="14" fill="#D4A843" opacity="0.25">✦</text>
-              <text x="296" y="100" font-size="10" fill="#D4A843" opacity="0.22">✦</text>
-              <!-- body -->
-              <ellipse cx="180" cy="315" rx="88" ry="100" fill="#1A0E08"/>
-              <ellipse cx="180" cy="300" rx="78" ry="88" fill="#2C1A0E"/>
-              <!-- tail long elegant -->
-              <path d="M255 340 Q320 305 330 258 Q338 210 308 196" stroke="#1A0E08" stroke-width="22" fill="none" stroke-linecap="round"/>
-              <path d="M255 340 Q320 305 330 258 Q338 210 308 196" stroke="#2C1A0E" stroke-width="16" fill="none" stroke-linecap="round"/>
-              <!-- tail tip -->
-              <ellipse cx="305" cy="192" rx="12" ry="18" fill="#3D2208" transform="rotate(-30 305 192)"/>
-              <!-- head -->
-              <circle cx="180" cy="168" r="100" fill="#1A0E08"/>
-              <circle cx="180" cy="160" r="92" fill="#2C1A0E"/>
-              <!-- ears pointed -->
-              <polygon points="110,130 92,82 140,114" fill="#1A0E08"/>
-              <polygon points="250,130 268,82 220,114" fill="#1A0E08"/>
-              <polygon points="112,128 96,86 138,114" fill="#3D2208" opacity="0.55"/>
-              <polygon points="248,128 264,86 222,114" fill="#3D2208" opacity="0.55"/>
-              <!-- eyes glowing yellow -->
-              <circle cx="155" cy="160" r="23" fill="#F5ECD7"/>
-              <circle cx="205" cy="160" r="23" fill="#F5ECD7"/>
-              <circle cx="155" cy="161" r="16" fill="#D4A843"/>
-              <circle cx="205" cy="161" r="16" fill="#D4A843"/>
-              <ellipse cx="155" cy="163" rx="10" ry="14.5" fill="#0A0604"/>
-              <ellipse cx="205" cy="163" rx="10" ry="14.5" fill="#0A0604"/>
-              <circle cx="150" cy="157" r="3.5" fill="white" opacity="0.95"/>
-              <circle cx="200" cy="157" r="3.5" fill="white" opacity="0.95"/>
-              <!-- tiny inner eye glow -->
-              <circle cx="158" cy="165" r="1.5" fill="#D4A843" opacity="0.4"/>
-              <circle cx="208" cy="165" r="1.5" fill="#D4A843" opacity="0.4"/>
-              <!-- nose -->
-              <ellipse cx="180" cy="180" rx="7" ry="5" fill="#3D2208"/>
-              <!-- mouth smug subtle -->
-              <path d="M170 186 Q180 192 190 186" stroke="#1A0E08" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-              <!-- whiskers faint -->
-              <line x1="82" y1="174" x2="158" y2="180" stroke="#3D2208" stroke-width="1.8" opacity="0.45"/>
-              <line x1="82" y1="185" x2="158" y2="184" stroke="#3D2208" stroke-width="1.8" opacity="0.45"/>
-              <line x1="278" y1="174" x2="202" y2="180" stroke="#3D2208" stroke-width="1.8" opacity="0.45"/>
-              <line x1="278" y1="185" x2="202" y2="184" stroke="#3D2208" stroke-width="1.8" opacity="0.45"/>
-              <!-- paws -->
-              <ellipse cx="128" cy="372" rx="32" ry="20" fill="#1A0E08"/>
-              <ellipse cx="128" cy="368" rx="28" ry="17" fill="#2C1A0E"/>
-              <ellipse cx="232" cy="372" rx="32" ry="20" fill="#1A0E08"/>
-              <ellipse cx="232" cy="368" rx="28" ry="17" fill="#2C1A0E"/>
-              <!-- toe beans -->
-              <circle cx="120" cy="363" r="5" fill="#1A0E08"/>
-              <circle cx="129" cy="360" r="5" fill="#1A0E08"/>
-              <circle cx="138" cy="363" r="5" fill="#1A0E08"/>
-              <circle cx="224" cy="363" r="5" fill="#1A0E08"/>
-              <circle cx="233" cy="360" r="5" fill="#1A0E08"/>
-              <circle cx="242" cy="363" r="5" fill="#1A0E08"/>
-              <!-- brownie in right paw -->
-              <rect x="222" y="346" width="26" height="20" rx="5" fill="#2C1A0E"/>
-              <rect x="224" y="348" width="22" height="16" rx="4" fill="#1A0E08"/>
-              <path d="M224 354 Q235 348 246 354" stroke="#D4A843" stroke-width="1.5" fill="none" opacity="0.55"/>
-              <circle cx="235" cy="352" r="2" fill="#D4A843" opacity="0.45"/>
+        <!-- SAM -->
+        <article class="cat-hero sam flip reveal">
+          <div class="cat-portrait" aria-hidden="true">
+            <svg viewBox="0 0 220 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="110" cy="210" r="76" fill="#1A0E08" opacity="0.16"/>
+              <ellipse cx="110" cy="172" rx="52" ry="60" fill="#1A0E08"/><ellipse cx="110" cy="165" rx="45" ry="52" fill="#2C1A0E"/>
+              <path d="M152 176 Q188 160 192 138 Q194 116 178 112" stroke="#1A0E08" stroke-width="15" fill="none" stroke-linecap="round"/>
+              <path d="M152 176 Q188 160 192 138 Q194 116 178 112" stroke="#2C1A0E" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <circle cx="110" cy="89" r="56" fill="#1A0E08"/><circle cx="110" cy="85" r="50" fill="#2C1A0E"/>
+              <polygon points="72,66 60,36 88,60" fill="#1A0E08"/><polygon points="148,66 160,36 132,60" fill="#1A0E08"/>
+              <polygon points="73,65 64,42 87,60" fill="#5C3317" opacity="0.5"/><polygon points="147,65 156,42 133,60" fill="#5C3317" opacity="0.5"/>
+              <circle cx="92" cy="86" r="14" fill="#F5ECD7"/><circle cx="128" cy="86" r="14" fill="#F5ECD7"/>
+              <circle cx="92" cy="87" r="9.5" fill="#D4A843"/><circle cx="128" cy="87" r="9.5" fill="#D4A843"/>
+              <ellipse cx="92" cy="88" rx="6" ry="8.5" fill="#1A0E08"/><ellipse cx="128" cy="88" rx="6" ry="8.5" fill="#1A0E08"/>
+              <circle cx="89" cy="84" r="2.2" fill="#fff" opacity="0.9"/><circle cx="125" cy="84" r="2.2" fill="#fff" opacity="0.9"/>
+              <ellipse cx="110" cy="97" rx="4.5" ry="3.2" fill="#5C3317"/>
+              <path d="M103 102 Q110 108 117 102" stroke="#3D2208" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <line x1="56" y1="92" x2="98" y2="96" stroke="#3D2208" stroke-width="1.4" opacity="0.5"/>
+              <line x1="56" y1="100" x2="98" y2="100" stroke="#3D2208" stroke-width="1.4" opacity="0.5"/>
+              <line x1="164" y1="92" x2="122" y2="96" stroke="#3D2208" stroke-width="1.4" opacity="0.5"/>
+              <line x1="164" y1="100" x2="122" y2="100" stroke="#3D2208" stroke-width="1.4" opacity="0.5"/>
+              <ellipse cx="80" cy="198" rx="20" ry="13" fill="#1A0E08"/><ellipse cx="140" cy="198" rx="20" ry="13" fill="#1A0E08"/>
+              <rect x="126" y="178" width="24" height="17" rx="4" fill="#2C1A0E"/><rect x="128" y="180" width="20" height="13" rx="3" fill="#1A0E08"/>
+              <path d="M128 184 Q138 178 148 184" stroke="#D4A843" stroke-width="1.5" fill="none" opacity="0.6"/>
             </svg>
           </div>
-          <div class="cat-personality-badge sam-badge">
-            <span>🌙</span> Midnight Inspector
+          <div>
+            <p class="eyebrow">Cat 02</p>
+            <h2 class="cat-name">Sam</h2>
+            <p class="cat-title">The mysterious, elegant one 🌙</p>
+            <p class="cat-bio">Sleek, black, and impossibly composed, Sam is the bakery’s silent quality control. He observes from the highest shelf, says nothing, and approves of almost nothing — which is exactly why his approval means everything. He has a documented weakness for chocolate brownies at 4am, though he’ll deny it under oath.</p>
+            <div class="cat-facts">
+              <div class="cat-fact"><b>Vibe</b><span>Observant, dramatic, elegant, silently chaotic</span></div>
+              <div class="cat-fact"><b>Represents</b><span>Chocolate, dark flavours, premium cakes, midnight café energy</span></div>
+              <div class="cat-fact"><b>Known for</b><span>Sitting on the brownie box for 20 minutes. No eye contact.</span></div>
+            </div>
+            <div class="cluster" style="margin-top:1.2rem"><span class="chip">🍫 Chocolate</span><span class="chip">🌙 Dark flavours</span><span class="chip">✨ Premium</span></div>
           </div>
-        </div>
-
+        </article>
       </div>
     </section>
 
-    <!-- ── Together ── -->
-    <section class="section together-section texture-bg" aria-label="Rico and Sam together">
-      <div class="section-inner">
-        <header class="section-header reveal">
-          <span class="section-label">Dynamic Duo</span>
-          <h2 class="section-title">Always Together, <em>Always Chaos</em></h2>
-          <div class="paw-divider">🐾 · · · 🐾</div>
-          <p class="section-subtitle">They are completely different cats. They also refuse to be in separate rooms.</p>
-        </header>
-
-        <div class="together-grid">
-          <div class="together-card reveal">
-            <div class="together-icon">🎂</div>
-            <h3>Cake Testing</h3>
-            <p>Rico licks the frosting. Sam knocks the whole thing over. Both claim to be helping.</p>
-          </div>
-          <div class="together-card reveal" style="transition-delay:.08s">
-            <div class="together-icon">📦</div>
-            <h3>Packaging Day</h3>
-            <p>Rico sits inside every empty box. Sam shreds the ribbon. Neither is useful. Both are essential.</p>
-          </div>
-          <div class="together-card reveal" style="transition-delay:.16s">
-            <div class="together-icon">☕</div>
-            <h3>Early Mornings</h3>
-            <p>Rico demands breakfast at 5am. Sam knocks the alarm clock off the table at 4:55am. It's a system.</p>
-          </div>
-          <div class="together-card reveal" style="transition-delay:.24s">
-            <div class="together-icon">🌙</div>
-            <h3>Midnight Raids</h3>
-            <p>Every brownie batch has a 40% survival rate overnight. We've accepted this.</p>
-          </div>
+    <!-- HALL OF CHAOS -->
+    <section class="section" style="background:var(--bg-soft)">
+      <div class="wrap">
+        <div class="head center reveal">
+          <span class="eyebrow">Documented incidents</span>
+          <h2 class="display">The hall of <em>chaos</em></h2>
+          <div class="paws center"></div>
+          <p class="lede">A non-exhaustive log of supervisory excellence.</p>
+        </div>
+        <div class="reviews">
+          <figure class="review card reveal"><div class="stars">🐾🐾🐾</div><blockquote>“Rico opened the fridge. We don’t know how. The caramel was gone. He looked proud.”</blockquote><figcaption class="who"><strong>Incident #14</strong></figcaption></figure>
+          <figure class="review card reveal" data-reveal-delay="1"><div class="stars">🐾🐾🐾</div><blockquote>“Found Sam asleep inside an empty bento box. He had claimed it as his own. We made another.”</blockquote><figcaption class="who"><strong>Incident #27</strong></figcaption></figure>
+          <figure class="review card reveal" data-reveal-delay="2"><div class="stars">🐾🐾🐾</div><blockquote>“Both cats supervised a single cupcake for an hour. It passed. Highest honour we can offer.”</blockquote><figcaption class="who"><strong>Incident #41</strong></figcaption></figure>
         </div>
       </div>
     </section>
 
-    <!-- ── CTA ── -->
-    <section class="section cats-cta-section" aria-label="Call to action">
-      <div class="section-inner cats-cta-inner reveal">
-        <h2 class="section-title">Ordered <em>Cat-Approved</em> Desserts?</h2>
-        <p class="section-subtitle" style="margin: 0 auto 2rem">
-          Browse our menu — curated, taste-tested, and begrudgingly approved by both Rico and Sam.
-        </p>
-        <div class="cats-cta-btns">
-          <a href="menu.html" class="btn btn-primary">Browse the Menu 🍰</a>
-          <a href="order.html" class="btn btn-gold">Place an Order 🐾</a>
+    <section class="section">
+      <div class="wrap">
+        <div class="band reveal">
+          <h2>Cat-approved &amp; ready to <em>order</em></h2>
+          <p>Every treat passes a rigorous (and deeply unscientific) inspection before it reaches you. Pick a favourite and let the supervisors do their thing.</p>
+          <div class="cluster center"><a href="menu.html" class="btn btn-gold" data-magnetic>Browse the menu 🍰</a><a href="order.html" class="btn" style="--btn-bg:transparent;--btn-ink:var(--c-gold-soft);box-shadow:inset 0 0 0 2px var(--c-gold)">Place an order</a></div>
+          <div class="paws-bg" aria-hidden="true">🐾 🐾 🐾 🐾 🐾 🐾 🐾</div>
         </div>
       </div>
     </section>
-
   </main>
 
   <div id="footer-root"></div>
 
+  <script src="js/data.js"></script>
   <script src="js/components.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/ui.js"></script>
 </body>
 </html>

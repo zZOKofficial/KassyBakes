@@ -1,102 +1,144 @@
-/* ========================================
-   KASSY BAKES — Shared HTML Components
-   ======================================== */
+/* ════════════════════════════════════════════════════════════════
+   KASSY BAKES — SHARED COMPONENTS
+   Injects: preloader, nav (theme toggle + scroll progress), footer,
+   toast host, back-to-top. Sets the active nav link automatically.
+   Theme is applied pre-paint by an inline <head> script to avoid FOUC.
+   ════════════════════════════════════════════════════════════════ */
+(function () {
+  'use strict';
 
-const NAV_HTML = `
-<nav class="navbar" role="navigation" aria-label="Main navigation">
-  <a href="index.html" class="nav-logo" aria-label="Kassy Bakes home">
-    <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <!-- Cat face logo mark -->
-      <circle cx="19" cy="20" r="13" fill="#7B4A22"/>
-      <!-- ears -->
-      <polygon points="7,11 3,3 13,9" fill="#7B4A22"/>
-      <polygon points="31,11 35,3 25,9" fill="#7B4A22"/>
-      <polygon points="8,10 5,5 13,9" fill="#C8844A"/>
-      <polygon points="30,10 33,5 25,9" fill="#C8844A"/>
-      <!-- face -->
-      <circle cx="14.5" cy="19" r="2.2" fill="#F5ECD7"/>
-      <circle cx="23.5" cy="19" r="2.2" fill="#F5ECD7"/>
-      <circle cx="15" cy="19.3" r="1.1" fill="#2C1A0E"/>
-      <circle cx="24" cy="19.3" r="1.1" fill="#2C1A0E"/>
-      <!-- nose -->
-      <ellipse cx="19" cy="23" rx="1.3" ry="0.9" fill="#C8844A"/>
-      <!-- mouth -->
-      <path d="M17 24.5 Q19 26 21 24.5" stroke="#7B4A22" stroke-width="0.9" fill="none" stroke-linecap="round"/>
-      <!-- whiskers -->
-      <line x1="6" y1="22" x2="14" y2="23" stroke="#F5ECD7" stroke-width="0.8" opacity="0.7"/>
-      <line x1="6" y1="24" x2="14" y2="23.8" stroke="#F5ECD7" stroke-width="0.8" opacity="0.7"/>
-      <line x1="32" y1="22" x2="24" y2="23" stroke="#F5ECD7" stroke-width="0.8" opacity="0.7"/>
-      <line x1="32" y1="24" x2="24" y2="23.8" stroke="#F5ECD7" stroke-width="0.8" opacity="0.7"/>
-    </svg>
-    Kassy Bakes
-  </a>
+  /* Cat-face logo mark (kept — bespoke, dependency-free, on-brand) */
+  const LOGO = `
+    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+      <circle cx="20" cy="21" r="13.5" fill="var(--c-walnut)"/>
+      <polygon points="8,12 4,3 14,10" fill="var(--c-walnut)"/>
+      <polygon points="32,12 36,3 26,10" fill="var(--c-walnut)"/>
+      <polygon points="9,11 6,6 14,10" fill="var(--c-honey)"/>
+      <polygon points="31,11 34,6 26,10" fill="var(--c-honey)"/>
+      <circle cx="15" cy="20" r="2.4" fill="var(--c-cream)"/>
+      <circle cx="25" cy="20" r="2.4" fill="var(--c-cream)"/>
+      <circle cx="15.4" cy="20.4" r="1.2" fill="var(--c-cocoa)"/>
+      <circle cx="25.4" cy="20.4" r="1.2" fill="var(--c-cocoa)"/>
+      <ellipse cx="20" cy="24.4" rx="1.5" ry="1" fill="var(--c-honey)"/>
+      <path d="M17.6 26 Q20 27.8 22.4 26" stroke="var(--c-walnut)" stroke-width="1" fill="none" stroke-linecap="round"/>
+      <line x1="6" y1="23" x2="14.5" y2="24" stroke="var(--c-cream)" stroke-width="0.9" opacity="0.7"/>
+      <line x1="6" y1="25.5" x2="14.5" y2="25.5" stroke="var(--c-cream)" stroke-width="0.9" opacity="0.7"/>
+      <line x1="34" y1="23" x2="25.5" y2="24" stroke="var(--c-cream)" stroke-width="0.9" opacity="0.7"/>
+      <line x1="34" y1="25.5" x2="25.5" y2="25.5" stroke="var(--c-cream)" stroke-width="0.9" opacity="0.7"/>
+    </svg>`;
 
-  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+  const NAV_LINKS = [
+    ['index.html', 'Home'],
+    ['about.html', 'About'],
+    ['cats.html', 'The Cats'],
+    ['menu.html', 'Menu'],
+    ['gallery.html', 'Gallery'],
+  ];
 
-  <ul class="nav-links" role="list">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="cats.html">The Cats</a></li>
-    <li><a href="menu.html">Menu</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="order.html" class="nav-order-btn">Order Now 🐾</a></li>
-  </ul>
-</nav>
-`;
+  const ICON = {
+    sun:  `<svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>`,
+    moon: `<svg class="i-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>`,
+    ig:   `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>`,
+    fb:   `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>`,
+    wa:   `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>`,
+    up:   `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>`,
+  };
 
-const FOOTER_HTML = `
-<footer class="footer">
-  <div class="footer-logo">Kassy Bakes</div>
-  <div class="footer-tagline">Handmade with love & a little cat chaos 🐾</div>
+  const page = (location.pathname.split('/').pop() || 'index.html');
 
-  <nav class="footer-links" aria-label="Footer navigation">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="cats.html">The Cats</a>
-    <a href="menu.html">Menu</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="order.html">Order</a>
-  </nav>
+  const navLinksHtml = NAV_LINKS.map(([href, label]) => {
+    const current = (href === page || (page === '' && href === 'index.html')) ? ' aria-current="page"' : '';
+    return `<li><a href="${href}"${current}>${label}</a></li>`;
+  }).join('');
 
-  <div class="footer-social" aria-label="Social media links">
-    <!-- Instagram -->
-    <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-      </svg>
-    </a>
-    <!-- Facebook -->
-    <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-      </svg>
-    </a>
-    <!-- WhatsApp -->
-    <a href="#" aria-label="WhatsApp" target="_blank" rel="noopener">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-      </svg>
-    </a>
-  </div>
+  const social = (cls = 'footer-social') => `
+    <div class="${cls}">
+      <a href="${KB.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${ICON.ig}</a>
+      <a href="${KB.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${ICON.fb}</a>
+      <a href="https://wa.me/${KB.whatsapp}" target="_blank" rel="noopener" aria-label="WhatsApp">${ICON.wa}</a>
+    </div>`;
 
-  <hr class="footer-divider"/>
-  <p class="footer-copy">© 2025 Kassy Bakes. All rights reserved.</p>
-  <p class="footer-cats">Supervised by Rico &amp; Sam 🐱🐱</p>
-</footer>
+  const NAV_HTML = `
+    <nav class="nav" role="navigation" aria-label="Main">
+      <div class="nav-inner">
+        <a href="index.html" class="brand" aria-label="Kassy Bakes — home">${LOGO}<span>Kassy <b>Bakes</b></span></a>
+        <ul class="nav-links" id="navLinks" role="list">
+          ${navLinksHtml}
+          <li class="nav-cta-mobile"><a href="order.html" class="btn btn-primary btn-sm">Order Now 🐾</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle day / night theme" title="Toggle Rico’s day ⇄ Sam’s night">${ICON.sun}${ICON.moon}</button>
+          <a href="order.html" class="btn btn-primary nav-cta nav-cta-desktop">Order 🐾</a>
+          <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+      <div class="nav-progress" id="navProgress"></div>
+    </nav>`;
 
-<button class="back-top" aria-label="Back to top">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="18 15 12 9 6 15"/>
-  </svg>
-</button>
-`;
+  const year = 2025; // brand established
+  const FOOTER_HTML = `
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="display">Kassy Bakes</div>
+            <p>Handmade desserts with a little cat chaos. Baked fresh to order, supervised by Rico &amp; Sam.</p>
+            ${social()}
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">Our Story</a>
+            <a href="cats.html">The Cats</a>
+            <a href="menu.html">Full Menu</a>
+            <a href="gallery.html">Gallery</a>
+          </div>
+          <div class="footer-col">
+            <h4>Order &amp; Visit</h4>
+            <a href="order.html">Place an Order</a>
+            <a href="https://wa.me/${KB.whatsapp}" target="_blank" rel="noopener">WhatsApp Us</a>
+            <a href="${KB.instagram}" target="_blank" rel="noopener">Instagram</a>
+            <li>Delivery city-wide</li>
+            <li>Reply daily · 10am–9pm</li>
+          </div>
+        </div>
+        <div class="footer-base">
+          <span>© ${year} Kassy Bakes · Made with love &amp; flour</span>
+          <span>Supervised by Rico &amp; Sam 🐱🐱</span>
+        </div>
+      </div>
+    </footer>`;
 
-// Inject into DOM
-document.addEventListener('DOMContentLoaded', () => {
-  const navEl = document.getElementById('nav-root');
-  const footEl = document.getElementById('footer-root');
-  if (navEl) navEl.innerHTML = NAV_HTML;
-  if (footEl) footEl.innerHTML = FOOTER_HTML;
-});
+  const PRELOADER_HTML = `
+    <div class="preloader" id="preloader" role="status" aria-live="polite">
+      <div class="preloader-inner">
+        ${LOGO.replace('viewBox="0 0 40 40"', 'viewBox="0 0 40 40" class="anim-float"')}
+        <div class="preloader-bar"><i></i></div>
+        <p>Warming the oven…</p>
+      </div>
+    </div>`;
+
+  const TOTOP_HTML = `<button class="to-top" id="toTop" aria-label="Back to top">${ICON.up}</button>`;
+  const TOAST_HTML = `<div class="toast-host" id="toastHost" aria-live="polite" aria-atomic="true"></div>`;
+
+  /* ── Inject ── */
+  function mount(id, html, where = 'afterbegin') {
+    const el = document.getElementById(id);
+    if (el) { el.innerHTML = html; return el; }
+    return null;
+  }
+
+  // Preloader goes first, directly in <body>
+  document.body.insertAdjacentHTML('afterbegin', PRELOADER_HTML);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    mount('nav-root', NAV_HTML);
+    mount('footer-root', FOOTER_HTML);
+    document.body.insertAdjacentHTML('beforeend', TOTOP_HTML + TOAST_HTML);
+    // Signal to ui.js that chrome is ready
+    document.dispatchEvent(new CustomEvent('kb:chrome-ready'));
+  });
+
+  // Expose icons/logo for other scripts if needed
+  window.KB_UI = { ICON, LOGO, social };
+})();

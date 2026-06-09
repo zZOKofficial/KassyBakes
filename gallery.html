@@ -1,543 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="day">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Kassy Bakes gallery — photos, customer love, and reviews. Real desserts, real warmth, real cats."/>
-  <title>Gallery & Reviews — Kassy Bakes</title>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/gallery.css"/>
+  <meta name="description" content="The Kassy Bakes gallery — frosting textures, cozy lighting, gift-ready packaging, and the occasional cat photobomb. Tag us and Rico & Sam will monitor your posts."/>
+  <meta name="theme-color" content="#FAF4E8"/>
+  <title>Gallery — Kassy Bakes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="css/core.css"/>
+  <link rel="stylesheet" href="css/pages.css"/>
+  <script>(function(){try{var t=localStorage.getItem('kb-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'night':'day');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
-<body class="page-enter">
-
+<body>
+  <a href="#main" class="sr-only">Skip to content</a>
   <div id="nav-root"></div>
 
-  <main class="page-pad">
+  <main id="main" class="page">
+    <header class="phead">
+      <div class="wrap-narrow">
+        <span class="eyebrow">Texture &amp; coziness</span>
+        <h1 class="display">The <em>gallery</em></h1>
+        <div class="paws center"></div>
+        <p class="lede">Frosting up close, cozy café lighting, gift-ready packaging — and the occasional supervisor photobomb. Order something beautiful, tag us, and Rico &amp; Sam will be monitoring your posts.</p>
+      </div>
+    </header>
 
-    <!-- ── Page Hero ── -->
-    <section class="page-hero gallery-hero texture-bg" aria-label="Gallery page header">
-      <div class="page-hero-inner">
-        <span class="section-label">The Visual World</span>
-        <h1 class="section-title">Pretty Things We've <em>Baked</em></h1>
-        <div class="paw-divider">🐾 · · · 🐾</div>
-        <p class="section-subtitle">
-          Every dessert we make is a small work of art. Here's a look inside the kitchen —
-          warm lighting, real frosting, and two cats hovering nearby.
-        </p>
+    <section class="section">
+      <div class="wrap">
+        <div class="masonry" id="galleryGrid"></div>
       </div>
     </section>
 
-    <!-- ── Gallery Grid ── -->
-    <section class="section gallery-section" aria-label="Gallery">
-      <div class="section-inner">
-        <header class="section-header reveal">
-          <span class="section-label">From Our Kitchen</span>
-          <h2 class="section-title">Fresh Bakes &amp; <em>Sweet Moments</em></h2>
-          <div class="paw-divider">🐾 · · · 🐾</div>
-        </header>
-
-        <div class="gallery-grid">
-
-          <!-- Item 1: Tall — Chocolate Ganache -->
-          <div class="gallery-item gi-tall reveal" tabindex="0" role="img" aria-label="Chocolate Ganache Cake">
-            <div class="gallery-img gi-chocolate">
-              <svg viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="300" height="400" fill="#2C1A0E"/>
-                <!-- wooden table -->
-                <rect x="0" y="300" width="300" height="100" fill="#5C3317"/>
-                <rect x="0" y="296" width="300" height="10" rx="2" fill="#7B4A22"/>
-                <!-- cake -->
-                <rect x="50" y="160" width="200" height="145" rx="15" fill="#3D2208"/>
-                <rect x="54" y="164" width="192" height="138" rx="12" fill="#5C3317"/>
-                <!-- ganache drip -->
-                <path d="M54 180 Q65 166 76 180 Q87 166 98 180 Q109 166 120 180 Q131 166 142 180 Q153 166 164 180 Q175 166 186 180 Q197 166 208 180 Q219 166 230 180 Q241 166 246 180" stroke="#1A0E08" stroke-width="6" fill="none" stroke-linecap="round"/>
-                <!-- top frosting -->
-                <ellipse cx="150" cy="164" rx="96" ry="22" fill="#3D2208"/>
-                <ellipse cx="150" cy="159" rx="92" ry="19" fill="#2C1A0E"/>
-                <!-- gold details -->
-                <circle cx="120" cy="155" r="5" fill="#D4A843"/>
-                <circle cx="150" cy="148" r="6" fill="#D4A843"/>
-                <circle cx="180" cy="154" r="5" fill="#D4A843"/>
-                <!-- flower garnish -->
-                <circle cx="150" cy="148" r="12" fill="none" stroke="#D4A843" stroke-width="1.5" opacity="0.4"/>
-                <!-- plate -->
-                <ellipse cx="150" cy="308" rx="110" ry="16" fill="#D9C49A"/>
-                <ellipse cx="150" cy="305" rx="106" ry="13" fill="#EDD9B4"/>
-                <!-- fork -->
-                <line x1="50" y1="316" x2="50" y2="360" stroke="#C8844A" stroke-width="2.5" stroke-linecap="round"/>
-                <line x1="45" y1="316" x2="45" y2="328" stroke="#C8844A" stroke-width="1.5" stroke-linecap="round"/>
-                <line x1="50" y1="316" x2="50" y2="328" stroke="#C8844A" stroke-width="1.5" stroke-linecap="round"/>
-                <line x1="55" y1="316" x2="55" y2="328" stroke="#C8844A" stroke-width="1.5" stroke-linecap="round"/>
-                <!-- cozy candle to the side -->
-                <rect x="232" y="275" width="10" height="30" rx="4" fill="#C4732A"/>
-                <ellipse cx="237" cy="273" rx="5" ry="8" fill="#E8C46A" opacity="0.85"/>
-                <!-- Sam eye glint in dark -->
-                <circle cx="270" cy="80" r="16" fill="#1A0E08" opacity="0.8"/>
-                <circle cx="264" cy="79" r="7" fill="#D4A843" opacity="0.9"/>
-                <circle cx="276" cy="79" r="7" fill="#D4A843" opacity="0.9"/>
-                <ellipse cx="264" cy="80" rx="4.5" ry="6" fill="#080402"/>
-                <ellipse cx="276" cy="80" rx="4.5" ry="6" fill="#080402"/>
-                <circle cx="262" cy="78" r="1.5" fill="white" opacity="0.9"/>
-                <circle cx="274" cy="78" r="1.5" fill="white" opacity="0.9"/>
-                <!-- caption -->
-                <text x="150" y="370" font-family="Caveat,cursive" font-size="16" fill="#EDD9B4" text-anchor="middle" opacity="0.75">Chocolate Ganache Cake</text>
-              </svg>
-            </div>
-            <div class="gallery-overlay">
-              <span>🍫 Chocolate Ganache</span>
-            </div>
-          </div>
-
-          <!-- Item 2: Normal — Cupcakes -->
-          <div class="gallery-item reveal" style="transition-delay:.06s" tabindex="0" role="img" aria-label="Cupcake box">
-            <div class="gallery-img gi-cupcakes">
-              <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="300" height="300" fill="#7B4A22"/>
-                <!-- wooden board -->
-                <rect x="10" y="220" width="280" height="70" rx="8" fill="#5C3317"/>
-                <!-- cupcake box open -->
-                <rect x="30" y="100" width="240" height="125" rx="10" fill="#EDD9B4"/>
-                <rect x="33" y="103" width="234" height="120" rx="8" fill="#F5ECD7"/>
-                <!-- dividers -->
-                <line x1="110" y1="103" x2="110" y2="223" stroke="#D9C49A" stroke-width="1.5"/>
-                <line x1="190" y1="103" x2="190" y2="223" stroke="#D9C49A" stroke-width="1.5"/>
-                <!-- Cupcake 1 vanilla -->
-                <rect x="43" y="150" width="55" height="68" rx="6" fill="#C8844A"/>
-                <ellipse cx="70" cy="150" rx="32" ry="16" fill="#F5ECD7"/>
-                <ellipse cx="70" cy="144" rx="26" ry="14" fill="#EDD9B4"/>
-                <path d="M50 142 Q70 130 90 142" stroke="#D4A843" stroke-width="2" fill="none"/>
-                <circle cx="70" cy="130" r="5" fill="#D4A843"/>
-                <!-- Cupcake 2 choc -->
-                <rect x="123" y="150" width="55" height="68" rx="6" fill="#3D2208"/>
-                <ellipse cx="150" cy="150" rx="32" ry="16" fill="#5C3317"/>
-                <ellipse cx="150" cy="144" rx="26" ry="14" fill="#7B4A22"/>
-                <path d="M130 142 Q150 130 170 142" stroke="#2C1A0E" stroke-width="2" fill="none"/>
-                <circle cx="150" cy="130" r="5" fill="#2C1A0E"/>
-                <circle cx="147" cy="136" r="2" fill="#EDD9B4"/>
-                <circle cx="153" cy="134" r="2" fill="#EDD9B4"/>
-                <!-- Cupcake 3 red velvet -->
-                <rect x="203" y="150" width="55" height="68" rx="6" fill="#8B2635"/>
-                <ellipse cx="230" cy="150" rx="32" ry="16" fill="#F5ECD7"/>
-                <ellipse cx="230" cy="144" rx="26" ry="14" fill="#F9F4EE"/>
-                <path d="M210 142 Q230 130 250 142" stroke="#EDD9B4" stroke-width="2" fill="none"/>
-                <circle cx="230" cy="130" r="5" fill="#8B2635"/>
-                <!-- bow on box -->
-                <path d="M148 103 Q150 88 152 103" stroke="#D4A843" stroke-width="2" fill="none"/>
-                <ellipse cx="140" cy="97" rx="10" ry="7" fill="#D4A843" opacity="0.8" transform="rotate(-20 140 97)"/>
-                <ellipse cx="160" cy="97" rx="10" ry="7" fill="#D4A843" opacity="0.8" transform="rotate(20 160 97)"/>
-                <circle cx="150" cy="103" r="4" fill="#C8844A"/>
-                <!-- label -->
-                <text x="150" y="270" font-family="Caveat,cursive" font-size="15" fill="#F5ECD7" text-anchor="middle" font-weight="600">Gift Box Cupcakes</text>
-              </svg>
-            </div>
-            <div class="gallery-overlay"><span>🧁 Gift Box Cupcakes</span></div>
-          </div>
-
-          <!-- Item 3: Wide — Milk Cake -->
-          <div class="gallery-item gi-wide reveal" style="transition-delay:.12s" tabindex="0" role="img" aria-label="Tres Leches Milk Cake">
-            <div class="gallery-img gi-milkcake">
-              <svg viewBox="0 0 580 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="580" height="300" fill="#A0622A"/>
-                <!-- wooden table -->
-                <rect x="0" y="220" width="580" height="80" fill="#7B4A22"/>
-                <rect x="0" y="216" width="580" height="10" rx="2" fill="#A0622A"/>
-                <!-- tray -->
-                <rect x="80" y="140" width="420" height="90" rx="12" fill="#EDD9B4"/>
-                <rect x="83" y="143" width="414" height="85" rx="10" fill="#F5ECD7"/>
-                <!-- milk cake slice cut -->
-                <rect x="100" y="152" width="380" height="66" rx="8" fill="#F5ECD7"/>
-                <rect x="102" y="154" width="376" height="62" rx="7" fill="#FAF4E8"/>
-                <!-- soaked texture lines -->
-                <path d="M102 162 Q200 155 300 162 Q400 155 478 162" stroke="#D9C49A" stroke-width="1.5" fill="none" opacity="0.5"/>
-                <path d="M102 172 Q200 165 300 172 Q400 165 478 172" stroke="#D9C49A" stroke-width="1.5" fill="none" opacity="0.5"/>
-                <!-- cream top -->
-                <rect x="100" y="148" width="380" height="12" rx="4" fill="#F5ECD7"/>
-                <!-- caramel drizzle -->
-                <path d="M115 152 Q160 144 210 152 Q260 144 310 152 Q360 144 410 152 Q445 144 465 152" stroke="#D4A843" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75"/>
-                <!-- cinnamon dust -->
-                <circle cx="200" cy="150" r="2.5" fill="#C8844A" opacity="0.5"/>
-                <circle cx="280" cy="149" r="2" fill="#C8844A" opacity="0.5"/>
-                <circle cx="360" cy="150" r="2.5" fill="#C8844A" opacity="0.5"/>
-                <!-- cut edge detail -->
-                <line x1="100" y1="215" x2="100" y2="148" stroke="#D9C49A" stroke-width="2"/>
-                <!-- slice taken out -->
-                <polygon points="100,148 140,148 140,215 100,215" fill="#EDD9B4" opacity="0.6"/>
-                <!-- cream ooze -->
-                <path d="M100 165 Q118 158 140 165" stroke="#F5ECD7" stroke-width="3" fill="none"/>
-                <!-- side cups of milk -->
-                <rect x="30" y="175" width="40" height="45" rx="6" fill="#F5ECD7"/>
-                <ellipse cx="50" cy="175" rx="20" ry="8" fill="#F5ECD7"/>
-                <ellipse cx="50" cy="173" rx="18" ry="6" fill="white"/>
-                <text x="43" y="205" font-family="Caveat,cursive" font-size="9" fill="#A0622A" font-weight="600">milk</text>
-                <!-- Rico watching in corner -->
-                <circle cx="530" cy="90" r="45" fill="#A0622A"/>
-                <ellipse cx="530" cy="88" rx="54" ry="28" fill="#C4732A" opacity="0.4"/>
-                <circle cx="516" cy="87" r="12" fill="#F5ECD7"/>
-                <circle cx="544" cy="87" r="12" fill="#F5ECD7"/>
-                <circle cx="516" cy="88" r="8" fill="#5A6B3A"/>
-                <circle cx="544" cy="88" r="8" fill="#5A6B3A"/>
-                <ellipse cx="516" cy="89" rx="5" ry="7" fill="#2C1A0E"/>
-                <ellipse cx="544" cy="89" rx="5" ry="7" fill="#2C1A0E"/>
-                <circle cx="514" cy="86" r="2" fill="white" opacity="0.9"/>
-                <circle cx="542" cy="86" r="2" fill="white" opacity="0.9"/>
-                <ellipse cx="530" cy="98" rx="6" ry="4" fill="#C4732A"/>
-                <polygon points="512,68 505,48 524,62" fill="#A0622A"/>
-                <polygon points="548,68 555,48 536,62" fill="#A0622A"/>
-                <!-- caption -->
-                <text x="290" y="272" font-family="Caveat,cursive" font-size="17" fill="#F5ECD7" text-anchor="middle" font-weight="600">Tres Leches Milk Cake</text>
-              </svg>
-            </div>
-            <div class="gallery-overlay"><span>🥛 Tres Leches Milk Cake</span></div>
-          </div>
-
-          <!-- Item 4: Normal — Bento Cake -->
-          <div class="gallery-item reveal" style="transition-delay:.18s" tabindex="0" role="img" aria-label="Bento Cake">
-            <div class="gallery-img gi-bento">
-              <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="300" height="300" fill="#3D2208"/>
-                <!-- box/packaging -->
-                <rect x="50" y="60" width="200" height="200" rx="16" fill="#F5ECD7"/>
-                <rect x="53" y="63" width="194" height="194" rx="14" fill="#FAF4E8"/>
-                <!-- cake inside -->
-                <circle cx="150" cy="160" r="80" fill="#5C3317"/>
-                <circle cx="150" cy="155" r="76" fill="#7B4A22"/>
-                <!-- frosting top -->
-                <circle cx="150" cy="155" r="70" fill="#F5ECD7"/>
-                <circle cx="150" cy="152" r="65" fill="#FAF4E8"/>
-                <!-- minimalist line design on top -->
-                <circle cx="150" cy="152" r="45" fill="none" stroke="#EDD9B4" stroke-width="1.5"/>
-                <circle cx="150" cy="152" r="30" fill="none" stroke="#D9C49A" stroke-width="1"/>
-                <!-- small cat face drawn on top -->
-                <circle cx="150" cy="152" r="18" fill="none" stroke="#C8844A" stroke-width="1.5"/>
-                <!-- cat ears mini -->
-                <polygon points="138,138 134,130 142,135" fill="none" stroke="#C8844A" stroke-width="1.5" stroke-linejoin="round"/>
-                <polygon points="162,138 166,130 158,135" fill="none" stroke="#C8844A" stroke-width="1.5" stroke-linejoin="round"/>
-                <!-- cat eyes -->
-                <circle cx="145" cy="148" r="2.5" fill="#C8844A"/>
-                <circle cx="155" cy="148" r="2.5" fill="#C8844A"/>
-                <!-- cat nose -->
-                <ellipse cx="150" cy="154" rx="1.5" ry="1" fill="#C8844A"/>
-                <!-- cat mouth -->
-                <path d="M147 157 Q150 160 153 157" stroke="#C8844A" stroke-width="1" fill="none"/>
-                <!-- written message -->
-                <text x="150" y="200" font-family="Caveat,cursive" font-size="13" fill="#A0622A" text-anchor="middle" font-weight="700">Happy Birthday!</text>
-                <!-- ribbon -->
-                <path d="M50 160 Q150 145 250 160" stroke="#D4A843" stroke-width="1.5" fill="none" opacity="0.3"/>
-                <!-- lid propped open suggestion -->
-                <rect x="53" y="63" width="194" height="8" rx="3" fill="#D4A843" opacity="0.3"/>
-                <!-- caption -->
-                <text x="150" y="278" font-family="Caveat,cursive" font-size="14" fill="#EDD9B4" text-anchor="middle" opacity="0.8">Vanilla Bento Cake</text>
-              </svg>
-            </div>
-            <div class="gallery-overlay"><span>🎁 Bento Cake</span></div>
-          </div>
-
-          <!-- Item 5: Normal — Red Velvet -->
-          <div class="gallery-item reveal" style="transition-delay:.24s" tabindex="0" role="img" aria-label="Red Velvet Cake slice">
-            <div class="gallery-img gi-redvelvet">
-              <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="300" height="300" fill="#6B1D28"/>
-                <!-- plate -->
-                <ellipse cx="150" cy="230" rx="110" ry="20" fill="#D9C49A"/>
-                <ellipse cx="150" cy="227" rx="106" ry="17" fill="#EDD9B4"/>
-                <!-- cake slice -->
-                <polygon points="150,100 260,220 40,220" fill="#8B2635"/>
-                <polygon points="152,102 258,218 42,218" fill="#A03040"/>
-                <!-- cream layers inside slice -->
-                <line x1="60" y1="205" x2="240" y2="205" stroke="#F5ECD7" stroke-width="6"/>
-                <line x1="70" y1="190" x2="230" y2="190" stroke="#F5ECD7" stroke-width="6"/>
-                <!-- top frosting on slice -->
-                <path d="M150 100 Q170 88 258 218 Q240 210 220 220 Q180 200 150 205 Q120 200 80 220 Q60 210 42 218 Q130 88 150 100" fill="#F5ECD7" opacity="0.6"/>
-                <!-- cherry on top of slice -->
-                <circle cx="150" cy="88" r="10" fill="#C4732A"/>
-                <line x1="150" y1="78" x2="152" y2="66" stroke="#5A6B3A" stroke-width="1.5"/>
-                <!-- cream smear -->
-                <path d="M100 228 Q130 222 160 228 Q190 222 220 228" stroke="#F5ECD7" stroke-width="3" fill="none" opacity="0.6"/>
-                <!-- fork on plate -->
-                <line x1="56" y1="218" x2="56" y2="248" stroke="#C8844A" stroke-width="2.5" stroke-linecap="round"/>
-                <line x1="51" y1="218" x2="51" y2="228" stroke="#C8844A" stroke-width="1.5" stroke-linecap="round"/>
-                <line x1="56" y1="218" x2="56" y2="228" stroke="#C8844A" stroke-width="1.5" stroke-linecap="round"/>
-                <line x1="61" y1="218" x2="61" y2="228" stroke="#C8844A" stroke-width="1.5" stroke-linecap="round"/>
-                <!-- Sam paw top right -->
-                <ellipse cx="248" cy="70" rx="30" ry="20" fill="#1A0E08" transform="rotate(-20 248 70)"/>
-                <circle cx="238" cy="61" r="5" fill="#1A0E08"/>
-                <circle cx="248" cy="57" r="5" fill="#1A0E08"/>
-                <circle cx="258" cy="61" r="5" fill="#1A0E08"/>
-                <!-- caption -->
-                <text x="150" y="272" font-family="Caveat,cursive" font-size="15" fill="#F5ECD7" text-anchor="middle" font-weight="600">Red Velvet Slice</text>
-              </svg>
-            </div>
-            <div class="gallery-overlay"><span>❤️ Red Velvet</span></div>
-          </div>
-
-          <!-- Item 6: Normal — Tea Time Loaf -->
-          <div class="gallery-item reveal" style="transition-delay:.3s" tabindex="0" role="img" aria-label="Tea Time Marble Cake">
-            <div class="gallery-img gi-teatime">
-              <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="300" height="300" fill="#5C3317"/>
-                <!-- wooden chopping board -->
-                <rect x="20" y="180" width="260" height="100" rx="12" fill="#7B4A22"/>
-                <rect x="22" y="182" width="256" height="96" rx="10" fill="#A0622A" opacity="0.7"/>
-                <!-- board grain lines -->
-                <line x1="22" y1="210" x2="278" y2="210" stroke="#7B4A22" stroke-width="1" opacity="0.4"/>
-                <line x1="22" y1="235" x2="278" y2="235" stroke="#7B4A22" stroke-width="1" opacity="0.4"/>
-                <!-- loaf cake -->
-                <rect x="60" y="100" width="180" height="90" rx="14" fill="#C8844A"/>
-                <rect x="63" y="103" width="174" height="85" rx="12" fill="#D4A843" opacity="0.7"/>
-                <!-- marble swirl top -->
-                <path d="M70 118 Q100 105 130 118 Q160 105 190 118 Q215 108 230 118" stroke="#7B4A22" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.5"/>
-                <path d="M75 130 Q108 120 140 130 Q172 120 225 130" stroke="#5C3317" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.5"/>
-                <path d="M70 142 Q105 133 140 142 Q175 133 228 142" stroke="#7B4A22" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.4"/>
-                <!-- sugar crust top -->
-                <rect x="60" y="95" width="180" height="12" rx="8" fill="#D4A843"/>
-                <!-- loaf sides -->
-                <rect x="60" y="185" width="180" height="10" rx="3" fill="#A0622A"/>
-                <!-- tea cup beside -->
-                <rect x="218" y="148" width="48" height="40" rx="8" fill="#EDD9B4"/>
-                <path d="M266 160 Q276 165 266 172" stroke="#EDD9B4" stroke-width="4" fill="none" stroke-linecap="round"/>
-                <ellipse cx="242" cy="148" rx="24" ry="8" fill="#EDD9B4"/>
-                <ellipse cx="242" cy="146" rx="22" ry="6" fill="#F5ECD7"/>
-                <!-- steam from tea -->
-                <path d="M235 136 Q237 126 235 116" stroke="#D9C49A" stroke-width="1.5" fill="none" opacity="0.4" stroke-dasharray="3 3"/>
-                <path d="M248 134 Q250 124 248 114" stroke="#D9C49A" stroke-width="1.5" fill="none" opacity="0.35" stroke-dasharray="3 3"/>
-                <!-- saucer -->
-                <ellipse cx="242" cy="188" rx="30" ry="8" fill="#D9C49A"/>
-                <!-- Rico tail curling bottom corner -->
-                <path d="M20 280 Q50 260 60 240 Q70 220 55 210" stroke="#A0622A" stroke-width="14" fill="none" stroke-linecap="round"/>
-                <path d="M20 280 Q50 260 60 240 Q70 220 55 210" stroke="#C8844A" stroke-width="10" fill="none" stroke-linecap="round"/>
-                <!-- caption -->
-                <text x="150" y="268" font-family="Caveat,cursive" font-size="15" fill="#F5ECD7" text-anchor="middle" font-weight="600">Marble Loaf &amp; Tea</text>
-              </svg>
-            </div>
-            <div class="gallery-overlay"><span>🍵 Tea Time Marble Loaf</span></div>
-          </div>
-
-          <!-- Item 7: Tall — Butterscotch Cake -->
-          <div class="gallery-item gi-tall reveal" style="transition-delay:.36s" tabindex="0" role="img" aria-label="Butterscotch Cake">
-            <div class="gallery-img gi-butterscotch">
-              <svg viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="300" height="400" fill="#A0622A"/>
-                <!-- warm café table -->
-                <rect x="0" y="310" width="300" height="90" fill="#7B4A22"/>
-                <rect x="0" y="306" width="300" height="10" rx="2" fill="#A0622A"/>
-                <!-- 3-tier butterscotch cake -->
-                <!-- bottom -->
-                <rect x="30" y="220" width="240" height="95" rx="14" fill="#7B4A22"/>
-                <rect x="33" y="223" width="234" height="90" rx="12" fill="#A0622A"/>
-                <!-- middle -->
-                <rect x="55" y="165" width="190" height="62" rx="10" fill="#5C3317"/>
-                <rect x="58" y="168" width="184" height="57" rx="9" fill="#7B4A22"/>
-                <!-- top -->
-                <rect x="80" y="125" width="140" height="45" rx="8" fill="#3D2208"/>
-                <rect x="83" y="128" width="134" height="40" rx="7" fill="#5C3317"/>
-                <!-- butterscotch sauce drips bottom -->
-                <path d="M33 238 Q45 224 57 238 Q69 224 81 238 Q93 224 105 238 Q117 224 129 238 Q141 224 153 238 Q165 224 177 238 Q189 224 201 238 Q213 224 225 238 Q237 224 267 238" stroke="#D4A843" stroke-width="5.5" fill="none" stroke-linecap="round"/>
-                <!-- butterscotch drips middle -->
-                <path d="M58 182 Q70 170 82 182 Q94 170 106 182 Q118 170 130 182 Q142 170 154 182 Q166 170 178 182 Q190 170 202 182 Q214 170 242 182" stroke="#C8844A" stroke-width="4" fill="none" stroke-linecap="round"/>
-                <!-- top drips -->
-                <path d="M83 140 Q95 128 107 140 Q119 128 131 140 Q143 128 155 140 Q167 128 179 140 Q191 128 217 140" stroke="#D4A843" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-                <!-- nut topping -->
-                <ellipse cx="100" cy="124" rx="5" ry="3.5" fill="#7B4A22" transform="rotate(-15 100 124)"/>
-                <ellipse cx="120" cy="120" rx="5" ry="3.5" fill="#5C3317" transform="rotate(10 120 120)"/>
-                <ellipse cx="150" cy="118" rx="6" ry="4" fill="#7B4A22"/>
-                <ellipse cx="178" cy="121" rx="5" ry="3.5" fill="#5C3317" transform="rotate(-8 178 121)"/>
-                <ellipse cx="196" cy="125" rx="5" ry="3" fill="#7B4A22" transform="rotate(12 196 125)"/>
-                <!-- plate -->
-                <ellipse cx="150" cy="318" rx="130" ry="18" fill="#D9C49A"/>
-                <ellipse cx="150" cy="315" rx="126" ry="15" fill="#EDD9B4"/>
-                <!-- Rico sitting proudly beside cake -->
-                <circle cx="258" cy="160" r="35" fill="#A0622A"/>
-                <ellipse cx="258" cy="157" rx="40" ry="22" fill="#C4732A" opacity="0.4"/>
-                <circle cx="249" cy="158" r="9" fill="#F5ECD7"/>
-                <circle cx="267" cy="158" r="9" fill="#F5ECD7"/>
-                <circle cx="249" cy="159" r="6" fill="#5A6B3A"/>
-                <circle cx="267" cy="159" r="6" fill="#5A6B3A"/>
-                <ellipse cx="249" cy="160" rx="4" ry="5.5" fill="#2C1A0E"/>
-                <ellipse cx="267" cy="160" rx="4" ry="5.5" fill="#2C1A0E"/>
-                <circle cx="247" cy="157" r="1.5" fill="white" opacity="0.9"/>
-                <circle cx="265" cy="157" r="1.5" fill="white" opacity="0.9"/>
-                <ellipse cx="258" cy="167" rx="4.5" ry="3" fill="#C4732A"/>
-                <path d="M253 172 Q258 176 263 172" stroke="#7B4A22" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                <polygon points="240,138 233,118 252,132" fill="#A0622A"/>
-                <polygon points="276,138 283,118 264,132" fill="#A0622A"/>
-                <!-- caption -->
-                <text x="140" y="365" font-family="Caveat,cursive" font-size="16" fill="#F5ECD7" text-anchor="middle" font-weight="600">Butterscotch Layer Cake</text>
-              </svg>
-            </div>
-            <div class="gallery-overlay"><span>🍮 Butterscotch Cake</span></div>
-          </div>
-
-          <!-- Item 8: Normal — Brownie box -->
-          <div class="gallery-item reveal" style="transition-delay:.42s" tabindex="0" role="img" aria-label="Brownie Box">
-            <div class="gallery-img gi-brownies">
-              <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="300" height="300" fill="#1A0E08"/>
-                <!-- table surface -->
-                <rect x="0" y="220" width="300" height="80" fill="#2C1A0E"/>
-                <!-- brownie box -->
-                <rect x="30" y="90" width="240" height="140" rx="12" fill="#3D2208"/>
-                <rect x="33" y="93" width="234" height="135" rx="10" fill="#5C3317"/>
-                <!-- brownie grid 2x3 -->
-                <rect x="48" y="108" width="60" height="48" rx="7" fill="#3D2208"/>
-                <rect x="50" y="110" width="56" height="44" rx="6" fill="#2C1A0E"/>
-                <rect x="120" y="108" width="60" height="48" rx="7" fill="#3D2208"/>
-                <rect x="122" y="110" width="56" height="44" rx="6" fill="#2C1A0E"/>
-                <rect x="192" y="108" width="60" height="48" rx="7" fill="#3D2208"/>
-                <rect x="194" y="110" width="56" height="44" rx="6" fill="#2C1A0E"/>
-                <rect x="48" y="164" width="60" height="48" rx="7" fill="#3D2208"/>
-                <rect x="50" y="166" width="56" height="44" rx="6" fill="#2C1A0E"/>
-                <rect x="120" y="164" width="60" height="48" rx="7" fill="#3D2208"/>
-                <rect x="122" y="166" width="56" height="44" rx="6" fill="#2C1A0E"/>
-                <rect x="192" y="164" width="60" height="48" rx="7" fill="#3D2208"/>
-                <rect x="194" y="166" width="56" height="44" rx="6" fill="#2C1A0E"/>
-                <!-- caramel drizzle on brownies -->
-                <path d="M50 120 Q78 110 106 120" stroke="#D4A843" stroke-width="2" fill="none" opacity="0.65"/>
-                <path d="M122 116 Q150 108 178 116" stroke="#C8844A" stroke-width="2" fill="none" opacity="0.65"/>
-                <path d="M194 120 Q222 110 250 120" stroke="#D4A843" stroke-width="2" fill="none" opacity="0.65"/>
-                <!-- choc chips -->
-                <rect x="62" y="130" width="6" height="5" rx="1.5" fill="#1A0E08" transform="rotate(15 62 130)"/>
-                <rect x="136" y="128" width="6" height="5" rx="1.5" fill="#1A0E08" transform="rotate(-10 136 128)"/>
-                <rect x="206" y="132" width="6" height="5" rx="1.5" fill="#1A0E08" transform="rotate(8 206 132)"/>
-                <!-- Sam paw top left corner -->
-                <ellipse cx="44" cy="72" rx="28" ry="18" fill="#1A0E08" transform="rotate(20 44 72)"/>
-                <circle cx="35" cy="65" r="4.5" fill="#1A0E08"/>
-                <circle cx="44" cy="61" r="4.5" fill="#1A0E08"/>
-                <circle cx="53" cy="65" r="4.5" fill="#1A0E08"/>
-                <!-- Sam eye glint -->
-                <circle cx="260" cy="50" r="5" fill="#D4A843" opacity="0.8"/>
-                <circle cx="274" cy="50" r="5" fill="#D4A843" opacity="0.8"/>
-                <!-- box label -->
-                <text x="150" y="95" font-family="Caveat,cursive" font-size="11" fill="#D4A843" text-anchor="middle" font-weight="700" opacity="0.6">KASSY BAKES</text>
-                <!-- caption -->
-                <text x="150" y="270" font-family="Caveat,cursive" font-size="15" fill="#D4A843" text-anchor="middle" font-weight="600">Brownie Box — 7 inch</text>
-              </svg>
-            </div>
-            <div class="gallery-overlay"><span>🍫 Brownie Box</span></div>
-          </div>
-
+    <section class="section" style="background:var(--bg-soft);padding-block:clamp(2.5rem,5vw,4rem)">
+      <div class="wrap">
+        <div class="statbar">
+          <div class="stat reveal"><strong data-countup="100">100</strong><span>Happy orders</span></div>
+          <div class="stat reveal" data-reveal-delay="1"><strong data-countup="5">5</strong><span>★ Average rating</span></div>
+          <div class="stat reveal" data-reveal-delay="2"><strong data-countup="2">2</strong><span>Permanent cat critics</span></div>
         </div>
       </div>
     </section>
 
-    <!-- ── Cat Moments Strip ── -->
-    <section class="section cat-moments-section texture-bg" aria-label="Rico and Sam moments">
-      <div class="section-inner">
-        <header class="section-header reveal">
-          <span class="section-label">Behind the Scenes</span>
-          <h2 class="section-title"><em>Cat Chaos</em> on Record</h2>
-          <div class="paw-divider">🐾 · · · 🐾</div>
-          <p class="section-subtitle">A few documented incidents from the Kassy Bakes kitchen.</p>
-        </header>
-
-        <div class="moments-grid">
-          <div class="moment-card reveal">
-            <span class="moment-number">01</span>
-            <h3>The Great Caramel Incident</h3>
-            <p>Rico knocked the entire caramel sauce off the counter. Then watched it drip. Then licked it. We had to make a new batch. He looked proud.</p>
-            <span class="moment-cat">🟠 Rico</span>
-          </div>
-          <div class="moment-card reveal" style="transition-delay:.1s">
-            <span class="moment-number">02</span>
-            <h3>The Midnight Brownie Watch</h3>
-            <p>We came downstairs at 2am to find Sam sitting next to the freshly cut brownie tray. One brownie was noticeably smaller. He made no eye contact.</p>
-            <span class="moment-cat">⚫ Sam</span>
-          </div>
-          <div class="moment-card reveal" style="transition-delay:.2s">
-            <span class="moment-number">03</span>
-            <h3>Quality Control, Cupcake Dept.</h3>
-            <p>Rico sat on four cupcake boxes before we caught him. All four required re-frosting. He considered this "helping". We disagree.</p>
-            <span class="moment-cat">🟠 Rico</span>
-          </div>
-          <div class="moment-card reveal" style="transition-delay:.3s">
-            <span class="moment-number">04</span>
-            <h3>The Packaging Ribbon Crisis</h3>
-            <p>Sam discovered gift ribbon is extremely fun. He unravelled 3 metres. We found him inside a box surrounded by ribbon, looking very satisfied.</p>
-            <span class="moment-cat">⚫ Sam</span>
-          </div>
+    <section class="section">
+      <div class="wrap">
+        <div class="band reveal">
+          <h2>Your dessert could be the <em>next story.</em></h2>
+          <p>Order something beautiful, tag us, and join the gallery. The supervisors are always watching.</p>
+          <div class="cluster center"><a href="order.html" class="btn btn-gold" data-magnetic>Place an order 🐾</a><a href="menu.html" class="btn" style="--btn-bg:transparent;--btn-ink:var(--c-gold-soft);box-shadow:inset 0 0 0 2px var(--c-gold)">Browse menu</a></div>
+          <div class="paws-bg" aria-hidden="true">🐾 🐾 🐾 🐾 🐾 🐾 🐾</div>
         </div>
       </div>
     </section>
-
-    <!-- ── Reviews ── -->
-    <section class="section reviews-full-section" aria-label="Customer reviews">
-      <div class="section-inner">
-        <header class="section-header reveal">
-          <span class="section-label">Real Reviews</span>
-          <h2 class="section-title">What Our Customers <em>Say</em></h2>
-          <div class="paw-divider">🐾 · · · 🐾</div>
-          <p class="section-subtitle">Every word here is real. No cat tampered with the reviews. Probably.</p>
-        </header>
-
-        <div class="reviews-full-grid">
-          <blockquote class="review-full-card reveal">
-            <div class="review-stars">★★★★★</div>
-            <p>"The chocolate ganache cake was the most beautiful thing I've ever received as a gift. My family was speechless. And then they ate the whole thing in 10 minutes."</p>
-            <footer><strong>Nusrat F.</strong><span>Dhaka</span></footer>
-          </blockquote>
-          <blockquote class="review-full-card reveal" style="transition-delay:.08s">
-            <div class="review-stars">★★★★★</div>
-            <p>"I ordered the cupcake box for my sister's birthday. The packaging alone made her cry. The cupcakes made everyone cry. In the best way."</p>
-            <footer><strong>Rafi A.</strong><span>Chittagong</span></footer>
-          </blockquote>
-          <blockquote class="review-full-card reveal" style="transition-delay:.16s">
-            <div class="review-stars">★★★★★</div>
-            <p>"Biscoff cake. That's all I need to say. Ordered it twice in one week. Zero regrets."</p>
-            <footer><strong>Tasnim R.</strong><span>Sylhet</span></footer>
-          </blockquote>
-          <blockquote class="review-full-card reveal" style="transition-delay:.24s">
-            <div class="review-stars">★★★★★</div>
-            <p>"The tres leches milk cake is the softest thing I have ever put in my mouth. I ordered it for an office event and people were asking about it for two weeks."</p>
-            <footer><strong>Sadia M.</strong><span>Dhaka</span></footer>
-          </blockquote>
-          <blockquote class="review-full-card reveal" style="transition-delay:.32s">
-            <div class="review-stars">★★★★★</div>
-            <p>"The bento cake I ordered had a tiny cat drawn on it. I almost didn't eat it. Almost. It was incredible."</p>
-            <footer><strong>Imran H.</strong><span>Comilla</span></footer>
-          </blockquote>
-          <blockquote class="review-full-card reveal" style="transition-delay:.4s">
-            <div class="review-stars">★★★★★</div>
-            <p>"The butterscotch cake brought back every warm memory I have of homemade baking. I felt like I was at my grandmother's house. Exceptional."</p>
-            <footer><strong>Lamia K.</strong><span>Dhaka</span></footer>
-          </blockquote>
-        </div>
-
-        <!-- Social Proof Bar -->
-        <div class="social-proof-bar reveal">
-          <div class="sp-item">
-            <strong>100+</strong>
-            <span>Happy Orders</span>
-          </div>
-          <div class="sp-divider">✦</div>
-          <div class="sp-item">
-            <strong>5★</strong>
-            <span>Average Rating</span>
-          </div>
-          <div class="sp-divider">✦</div>
-          <div class="sp-item">
-            <strong>2</strong>
-            <span>Permanent Cat Critics</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── CTA ── -->
-    <section class="gallery-cta-section texture-bg" aria-label="Order CTA">
-      <div class="gallery-cta-inner reveal">
-        <h2>Your dessert could be the <em>next story.</em></h2>
-        <p>Order something beautiful. Tag us. Rico and Sam will be monitoring your posts.</p>
-        <div class="gallery-cta-btns">
-          <a href="order.html" class="btn btn-gold">Place an Order 🐾</a>
-          <a href="menu.html" class="btn btn-outline" style="border-color:var(--gold);color:var(--gold)">Browse Menu</a>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <div id="footer-root"></div>
 
+  <script src="js/data.js"></script>
   <script src="js/components.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/ui.js"></script>
 </body>
 </html>
