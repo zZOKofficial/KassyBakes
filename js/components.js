@@ -7,26 +7,27 @@
 (function () {
   'use strict';
 
-  /* Cat-face logo mark (kept — bespoke, dependency-free, on-brand) */
+  /* Cat-face logo mark — redrawn to match the doodle Rico/Sam art:
+     pointed ears w/ rose inner, slit-pupil eyes, tiger forehead stripes,
+     whiskers. Theme-adaptive via brand CSS vars; dependency-free. */
   const LOGO = `
     <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
-      <path d="M7 13 Q5 1 15 9 Z" fill="var(--c-walnut)"/>
-      <path d="M33 13 Q35 1 25 9 Z" fill="var(--c-walnut)"/>
-      <path d="M10 11 Q8.5 4 14.5 9 Z" fill="var(--c-honey)"/>
-      <path d="M30 11 Q31.5 4 25.5 9 Z" fill="var(--c-honey)"/>
-      <circle cx="20" cy="21" r="13.5" fill="var(--c-walnut)"/>
-      <circle cx="15" cy="20.5" r="2.9" fill="var(--c-cream)"/>
-      <circle cx="25" cy="20.5" r="2.9" fill="var(--c-cream)"/>
-      <circle cx="15.3" cy="20.8" r="1.5" fill="var(--c-cocoa)"/>
-      <circle cx="25.3" cy="20.8" r="1.5" fill="var(--c-cocoa)"/>
-      <circle cx="14.2" cy="19.7" r="0.7" fill="#fff" opacity="0.9"/>
-      <circle cx="24.2" cy="19.7" r="0.7" fill="#fff" opacity="0.9"/>
-      <path d="M18.6 24 Q20 23.2 21.4 24 Q20 25.4 18.6 24 Z" fill="var(--c-honey)"/>
-      <path d="M20 25.2 Q20 26.4 18.7 26.6 M20 25.2 Q20 26.4 21.3 26.6" stroke="var(--c-walnut)" stroke-width="0.9" fill="none" stroke-linecap="round"/>
-      <line x1="6" y1="23" x2="14.5" y2="24" stroke="var(--c-cream)" stroke-width="0.9" opacity="0.7"/>
-      <line x1="6" y1="25.5" x2="14.5" y2="25.5" stroke="var(--c-cream)" stroke-width="0.9" opacity="0.7"/>
-      <line x1="34" y1="23" x2="25.5" y2="24" stroke="var(--c-cream)" stroke-width="0.9" opacity="0.7"/>
-      <line x1="34" y1="25.5" x2="25.5" y2="25.5" stroke="var(--c-cream)" stroke-width="0.9" opacity="0.7"/>
+      <path d="M8.5 13.5 L11.5 4 L16.5 11 Z" fill="var(--c-walnut)"/>
+      <path d="M31.5 13.5 L28.5 4 L23.5 11 Z" fill="var(--c-walnut)"/>
+      <path d="M11 12 L12.4 6 L15 10.6 Z" fill="#E3A39B"/>
+      <path d="M29 12 L27.6 6 L25 10.6 Z" fill="#E3A39B"/>
+      <circle cx="20" cy="21" r="13" fill="var(--c-honey)"/>
+      <path d="M20 8.6 Q20 11 20 13 M16.6 10 Q17.1 12 16.8 13.6 M23.4 10 Q22.9 12 23.2 13.6" stroke="var(--c-cocoa)" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.75"/>
+      <circle cx="14.8" cy="20.6" r="4" fill="var(--c-cream)" stroke="var(--c-cocoa)" stroke-width="1"/>
+      <circle cx="25.2" cy="20.6" r="4" fill="var(--c-cream)" stroke="var(--c-cocoa)" stroke-width="1"/>
+      <line x1="14.8" y1="18" x2="14.8" y2="23.2" stroke="var(--c-cocoa)" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="25.2" y1="18" x2="25.2" y2="23.2" stroke="var(--c-cocoa)" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="13.5" cy="19.3" r="0.7" fill="#fff" opacity="0.9"/>
+      <circle cx="23.9" cy="19.3" r="0.7" fill="#fff" opacity="0.9"/>
+      <path d="M18.7 23.9 L21.3 23.9 L20 25.5 Z" fill="var(--c-walnut)"/>
+      <path d="M20 25.5 Q20 26.7 18.9 26.9 M20 25.5 Q20 26.7 21.1 26.9" stroke="var(--c-walnut)" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+      <path d="M6.5 21.8 L13 22.6 M6.5 24.6 L13 23.8" stroke="var(--c-cream)" stroke-width="0.9" opacity="0.7" stroke-linecap="round"/>
+      <path d="M33.5 21.8 L27 22.6 M33.5 24.6 L27 23.8" stroke="var(--c-cream)" stroke-width="0.9" opacity="0.7" stroke-linecap="round"/>
     </svg>`;
 
   const NAV_LINKS = [
