@@ -8,7 +8,7 @@
   'use strict';
 
   /* Cat-face logo mark — redrawn to match the doodle Rico/Sam art:
-     pointed ears w/ rose inner, slit-pupil eyes, tiger forehead stripes,
+     pointed ears w/ rose inner, happy closed eyes, tiger forehead stripes,
      whiskers. Theme-adaptive via brand CSS vars; dependency-free. */
   const LOGO = `
     <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
@@ -18,14 +18,10 @@
       <path d="M29 12 L27.6 6 L25 10.6 Z" fill="#E3A39B"/>
       <circle cx="20" cy="21" r="13" fill="var(--c-honey)"/>
       <path d="M20 8.6 Q20 11 20 13 M16.6 10 Q17.1 12 16.8 13.6 M23.4 10 Q22.9 12 23.2 13.6" stroke="var(--c-cocoa)" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.75"/>
-      <circle cx="14.8" cy="20.6" r="4" fill="var(--c-cream)" stroke="var(--c-cocoa)" stroke-width="1"/>
-      <circle cx="25.2" cy="20.6" r="4" fill="var(--c-cream)" stroke="var(--c-cocoa)" stroke-width="1"/>
-      <line x1="14.8" y1="18" x2="14.8" y2="23.2" stroke="var(--c-cocoa)" stroke-width="1.6" stroke-linecap="round"/>
-      <line x1="25.2" y1="18" x2="25.2" y2="23.2" stroke="var(--c-cocoa)" stroke-width="1.6" stroke-linecap="round"/>
-      <circle cx="13.5" cy="19.3" r="0.7" fill="#fff" opacity="0.9"/>
-      <circle cx="23.9" cy="19.3" r="0.7" fill="#fff" opacity="0.9"/>
+      <path d="M11.2 20.6 Q14.8 23.6 18.4 20.6" stroke="var(--c-cocoa)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <path d="M21.6 20.6 Q25.2 23.6 28.8 20.6" stroke="var(--c-cocoa)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
       <path d="M18.7 23.9 L21.3 23.9 L20 25.5 Z" fill="var(--c-walnut)"/>
-      <path d="M20 25.5 Q20 26.7 18.9 26.9 M20 25.5 Q20 26.7 21.1 26.9" stroke="var(--c-walnut)" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+      <path d="M20 25.5 L20 26.4 M20 26.4 Q18.8 27.3 17.9 26.6 M20 26.4 Q21.2 27.3 22.1 26.6" stroke="var(--c-walnut)" stroke-width="0.9" fill="none" stroke-linecap="round"/>
       <path d="M6.5 21.8 L13 22.6 M6.5 24.6 L13 23.8" stroke="var(--c-cream)" stroke-width="0.9" opacity="0.7" stroke-linecap="round"/>
       <path d="M33.5 21.8 L27 22.6 M33.5 24.6 L27 23.8" stroke="var(--c-cream)" stroke-width="0.9" opacity="0.7" stroke-linecap="round"/>
     </svg>`;
@@ -88,13 +84,25 @@
             <p>Handmade desserts with a little cat chaos. Baked fresh to order, supervised by Rico &amp; Sam.</p>
             ${social()}
             <div class="sam-scene sam-rim-on" style="max-width:150px;margin:1.6rem 0 0" aria-hidden="true">
-              <svg viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M30 150 C 40 110 70 96 96 100 L96 140 C 70 150 48 156 30 150 Z" fill="#1A0E08"/>
-                <path d="M190 150 C 180 110 150 96 124 100 L124 140 C 150 150 172 156 190 150 Z" fill="#1A0E08"/>
-                <circle cx="110" cy="92" r="52" fill="none" stroke="#F7EFDD" stroke-width="6"/>
-                <circle cx="110" cy="92" r="44" fill="#1A0E08"/>
-                <path d="M158 86 Q176 88 176 100 Q176 112 160 110" fill="none" stroke="#F7EFDD" stroke-width="6"/>
-                <path d="M110 110 C 96 98 92 86 100 80 C 106 76 110 82 110 86 C 110 82 114 76 120 80 C 128 86 124 98 110 110 Z" fill="none" stroke="#F7EFDD" stroke-width="3.4" stroke-linejoin="round"/>
+              <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M80 56 Q81 38 90 34 Q99 45 106 56 Z" fill="#1A0E08"/>
+                <path d="M132 56 Q131 38 122 34 Q113 45 106 56 Z" fill="#1A0E08"/>
+                <path d="M66 92 C 66 68 86 50 106 50 C 126 50 146 68 146 92 C 146 116 126 130 106 131 C 86 130 66 116 66 92 Z" fill="#1A0E08"/>
+                <path d="M84.1 53.5 L90.7 39 L101.2 53.5 Z" fill="#E3A39B"/>
+                <path d="M127.9 53.5 L121.3 39 L110.8 53.5 Z" fill="#E3A39B"/>
+                <path d="M76 92 Q90 104 104 92" stroke="#F4C84A" stroke-width="6" fill="none" stroke-linecap="round"/>
+                <path d="M108 92 Q122 104 136 92" stroke="#F4C84A" stroke-width="6" fill="none" stroke-linecap="round"/>
+                <path d="M100 104 L112 104 L106 110 Z" fill="#6B3F1E"/>
+                <path d="M106 110 L106 115 M106 115 Q100 120 96 116 M106 115 Q112 120 116 116" stroke="#F7EFDD" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M94 109 L62 105" stroke="#F7EFDD" stroke-width="1.7" opacity="0.85" stroke-linecap="round"/>
+                <path d="M94 113 L62 116" stroke="#F7EFDD" stroke-width="1.7" opacity="0.85" stroke-linecap="round"/>
+                <path d="M118 109 L150 105" stroke="#F7EFDD" stroke-width="1.7" opacity="0.85" stroke-linecap="round"/>
+                <path d="M118 113 L150 116" stroke="#F7EFDD" stroke-width="1.7" opacity="0.85" stroke-linecap="round"/>
+                <path d="M106 170 C 92 158 78 150 78 140 C 78 132 86 128 94 130 C 100 131 104 135 106 140 C 108 135 112 131 118 130 C 126 128 134 132 134 140 C 134 150 120 158 106 170 Z" fill="#F7EFDD" stroke="#1A0E08" stroke-width="3"/>
+                <ellipse cx="82" cy="146" rx="14" ry="11" fill="#1A0E08"/>
+                <ellipse cx="130" cy="146" rx="14" ry="11" fill="#1A0E08"/>
+                <path d="M77 140 L77 148 M86 140 L86 148" stroke="#F7EFDD" stroke-width="1.6" opacity="0.7" stroke-linecap="round"/>
+                <path d="M125 140 L125 148 M134 140 L134 148" stroke="#F7EFDD" stroke-width="1.6" opacity="0.7" stroke-linecap="round"/>
               </svg>
             </div>
           </div>
