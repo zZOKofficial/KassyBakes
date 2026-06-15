@@ -136,11 +136,7 @@
           <div class="paws center"></div>
           <p class="lede">A non-exhaustive log of supervisory excellence.</p>
         </div>
-        <div class="reviews">
-          <figure class="review card reveal"><div class="stars">🐾🐾🐾</div><blockquote>“Rico opened the fridge. We don’t know how. The caramel was gone. He looked proud.”</blockquote><figcaption class="who"><strong>Incident #14</strong></figcaption></figure>
-          <figure class="review card reveal" data-reveal-delay="1"><div class="stars">🐾🐾🐾</div><blockquote>“Found Sam asleep inside an empty bento box. He had claimed it as his own. We made another.”</blockquote><figcaption class="who"><strong>Incident #27</strong></figcaption></figure>
-          <figure class="review card reveal" data-reveal-delay="2"><div class="stars">🐾🐾🐾</div><blockquote>“Both cats supervised a single cupcake for an hour. It passed. Highest honour we can offer.”</blockquote><figcaption class="who"><strong>Incident #41</strong></figcaption></figure>
-        </div>
+        <div class="reviews" id="hall-incidents"></div>
       </div>
     </section>
 
@@ -149,8 +145,8 @@
         <div class="band reveal">
           <h2>Cat-approved &amp; ready to <em>order</em></h2>
           <p>Every treat passes a rigorous (and deeply unscientific) inspection before it reaches you. Pick a favourite and let the supervisors do their thing.</p>
-          <div class="cluster center"><a href="menu.html" class="btn btn-gold" data-magnetic>Browse the menu 🍰</a><a href="order.html" class="btn" style="--btn-bg:transparent;--btn-ink:var(--c-gold-soft);box-shadow:inset 0 0 0 2px var(--c-gold)">Place an order</a></div>
-          <div class="paws-bg" aria-hidden="true">🐾 🐾 🐾 🐾 🐾 🐾 🐾</div>
+          <div class="cluster center"><a href="menu.html" class="btn btn-gold" data-magnetic>Browse the menu</a><a href="order.html" class="btn" style="--btn-bg:transparent;--btn-ink:var(--c-gold-soft);box-shadow:inset 0 0 0 2px var(--c-gold)">Place an order</a></div>
+          <div class="paws-bg" aria-hidden="true"></div>
         </div>
       </div>
     </section>
@@ -161,5 +157,47 @@
   <script src="js/data.js"></script>
   <script src="js/components.js"></script>
   <script src="js/ui.js"></script>
+  <script>
+  document.addEventListener('kb:chrome-ready', function () {
+    var incidents = [
+      { num: '#3',  text: 'Rico sat on the kitchen scale for ten minutes. The recipe was not corrected. Everyone agreed it was close enough.' },
+      { num: '#7',  text: 'Sam appeared on the cooling rack between two sponge cakes. He said nothing. We said nothing. He left after twenty minutes.' },
+      { num: '#11', text: 'The butter went missing overnight. Rico was found sitting very still near the pantry. Investigation is technically still open.' },
+      { num: '#14', text: 'Rico opened the fridge. We don\'t know how. The caramel was gone. He looked proud.' },
+      { num: '#18', text: 'Rico discovered the cake turntable and hit it once with his paw. Then watched it spin for eleven minutes. He seemed at peace.' },
+      { num: '#22', text: 'Sam rejected a full batch of brownies by sitting on them. We remade them. He approved the second batch from across the room.' },
+      { num: '#27', text: 'Found Sam asleep inside an empty bento box. He had claimed it as his own. We made another.' },
+      { num: '#31', text: 'The piping bag went missing. It was under Rico. He was using it as a pillow. The icing was fine.' },
+      { num: '#35', text: 'Sam stared at the ganache for so long it set perfectly. We have since made him sit near all ganaches.' },
+      { num: '#38', text: 'Rico ate the fondant flower we spent forty minutes making. He appeared satisfied. We made it again.' },
+      { num: '#41', text: 'Both cats supervised a single cupcake for an hour. It passed. Highest honour we can offer.' },
+      { num: '#44', text: 'Sam knocked a full jar of sprinkles off the counter. Watched them fall. Turned and walked away. No eye contact.' },
+      { num: '#47', text: 'Rico was found wearing a ribbon. We did not put it there. He wore it with confidence. We said nothing.' },
+      { num: '#50', text: 'Both cats refused to leave the kitchen until the cinnamon rolls were done. We do not know how they knew.' },
+      { num: '#53', text: 'Sam walked across a freshly piped rose. We called it abstract. He has not acknowledged the incident.' },
+      { num: '#57', text: 'Rico knocked the vanilla extract off the shelf, smelled it for three seconds, then walked away. No explanation offered.' },
+      { num: '#60', text: 'Found Sam sitting on the warm oven top at 3am. He had approved nothing. He was simply present. We moved on.' },
+      { num: '#64', text: 'Rico followed the delivery driver to the gate and back. He inspected each box personally. Two were granted entry.' },
+      { num: '#68', text: 'Sam sat between two cooling cakes for four hours. Temperature readings were within tolerance. We credit him.' },
+      { num: '#72', text: 'Both cats stared at the fridge for eleven minutes at midnight. We don\'t know what they heard. We don\'t ask anymore.' }
+    ];
+
+    for (var i = incidents.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = incidents[i]; incidents[i] = incidents[j]; incidents[j] = tmp;
+    }
+
+    var grid = document.getElementById('hall-incidents');
+    if (!grid) return;
+
+    grid.innerHTML = incidents.slice(0, 3).map(function (inc) {
+      return '<figure class=”review card”>'
+        + '<div class=”stars”>🐾🐾🐾</div>'
+        + '<blockquote>”' + inc.text + '”</blockquote>'
+        + '<figcaption class=”who”><strong>Incident ' + inc.num + '</strong></figcaption>'
+        + '</figure>';
+    }).join('');
+  });
+  </script>
 </body>
 </html>

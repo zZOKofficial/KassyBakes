@@ -7,9 +7,9 @@
 
 const KB = {
   /* WhatsApp number — international format, digits only. Replace before launch. */
-  whatsapp: '8801000000000',
-  instagram: 'https://instagram.com/',
-  facebook: 'https://facebook.com/',
+  whatsapp: '14373668857',
+  instagram: 'https://instagram.com/kassy.bakes/',
+  facebook: 'https://facebook.com/kasfia.mahmud.906',
 
   /* Each category: id, label, icon, blurb, optional note */
   categories: [
