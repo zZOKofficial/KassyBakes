@@ -4,7 +4,7 @@
 
 A cozy, cat-themed boutique bakery website for **Kassy Bakes** — a handmade dessert business serving cakes, cupcakes, brownies, milk cakes and more, all made fresh to order and supervised by two very opinionated cats, **Rico & Sam**.
 
-The site is a fast, fully static, dependency-free front-end. Orders flow straight from the website to the owner via WhatsApp — no backend required.
+The site is a fast, fully static, dependency-free front-end. Orders flow straight from the website to the owner via WhatsApp, backend has not been implemented yet. Soon I will connect it with a database with proper admin panel.
 
 ## ✨ Features
 
